@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #1e293b;
+    background-color: #f8fafc;
+  }
+  
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+/* Custom Trade Theme Accent Utilities */
+.bg-trade-red {
+  background-color: #dc2626;
+}
+
+.text-trade-red {
+  color: #dc2626;
+}
+
+.border-trade-red {
+  border-color: #dc2626;
+}
+
+/* Red underline heading style from Image 2 reference */
+.heading-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.heading-underline::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background-color: #dc2626;
+  margin: 12px auto 0 auto;
+  border-radius: 2px;
+}
+
+/* Circular badge icon from Image 2 reference */
+.trade-icon-badge {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px solid #dc2626;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #dc2626;
+  margin: 0 auto 20px auto;
+  transition: all 0.3s ease;
+}
+
+.trade-icon-badge:hover {
+  background-color: #dc2626;
+  color: #ffffff;
+  transform: scale(1.05);
+}
