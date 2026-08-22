@@ -4,11 +4,11 @@ import { ShieldCheck, Award, ThumbsUp } from 'lucide-react';
 export default function TradeHero({ onOpenQuote }) {
   return (
     <section className="relative bg-slate-950 text-white py-20 lg:py-28 overflow-hidden">
-      {/* Background Image with Dark Trade Vignette (Image 2 style) */}
+      {/* Background Image with Dark Vignette */}
       <div className="absolute inset-0 z-0">
         <img 
           src="/hero_luxury_bathroom.jpg" 
-          alt="DOM BATHROOMS LTD Trade Work" 
+          alt="M&H Plumbing & Heating Work Showcase" 
           className="w-full h-full object-cover filter brightness-50 contrast-110"
         />
         <div className="absolute inset-0 bg-slate-950/75" />
@@ -16,17 +16,17 @@ export default function TradeHero({ onOpenQuote }) {
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-6">
         
-        {/* Main Heading (Image 2 exact style) */}
+        {/* Main Heading */}
         <h1 className="text-3xl sm:text-5xl lg:text-6xl font-heading font-black tracking-tight text-white uppercase leading-tight">
-          WELCOME TO <span className="text-red-600">DOM BATHROOMS LTD</span>
+          WELCOME TO <span className="text-red-600">M&H PLUMBING & HEATING</span>
         </h1>
 
-        {/* Copywriting */}
+        {/* Copywriting from IG profile */}
         <p className="text-slate-200 text-base sm:text-lg max-w-2xl mx-auto font-medium leading-relaxed">
-          From stripping out old bathrooms, through the complete refurbishment process, to a fresh, modern and beautifully finished new space — <strong className="text-white font-bold">we take care of the whole transformation.</strong>
+          Specialists in <strong className="text-white font-bold">all aspects of plumbing & precision tiling</strong>, luxury bathroom renovations, and heating solutions across Liverpool, North West, and North Wales.
         </p>
 
-        {/* Red CTA Button (Matching Image 2 red button design) */}
+        {/* Red CTA Button */}
         <div className="pt-4">
           <button
             onClick={onOpenQuote}
@@ -36,22 +36,22 @@ export default function TradeHero({ onOpenQuote }) {
           </button>
         </div>
 
-        {/* Trust Badges Bar Below Button (Matching Image 2 Trustpilot/Checkatrade Box) */}
+        {/* Trust Badges */}
         <div className="pt-8 max-w-xl mx-auto">
           <div className="bg-slate-900/90 border border-slate-800 p-4 rounded-lg flex items-center justify-around text-xs font-bold uppercase tracking-wider text-slate-300">
             <div className="flex items-center gap-2">
               <ShieldCheck className="w-5 h-5 text-red-500" />
-              <span>FULLY INSURED</span>
+              <span>FULL PLUMBING & TILING</span>
             </div>
             <div className="w-px h-6 bg-slate-800" />
             <div className="flex items-center gap-2">
               <Award className="w-5 h-5 text-amber-500" />
-              <span>QUALITY FINISH</span>
+              <span>BATHROOM RENOVATIONS</span>
             </div>
             <div className="w-px h-6 bg-slate-800" />
             <div className="flex items-center gap-2">
               <ThumbsUp className="w-5 h-5 text-emerald-500" />
-              <span>100% SATISFACTION</span>
+              <span>LIVERPOOL & NORTH WEST</span>
             </div>
           </div>
         </div>

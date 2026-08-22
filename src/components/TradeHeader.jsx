@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, ChevronRight, Phone } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 
 export default function TradeHeader({ onOpenQuote }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -9,13 +9,21 @@ export default function TradeHeader({ onOpenQuote }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 sm:h-24">
           
-          {/* Official Logo Image (Matching User Provided Logo Image) */}
+          {/* M&H Plumbing & Heating Logo Image */}
           <a href="#" className="flex items-center gap-3">
             <img 
-              src="/dom_logo.png" 
-              alt="DOM BATHROOMS LTD Logo" 
-              className="h-14 sm:h-16 w-auto object-contain py-1"
+              src="/mh_logo.png" 
+              alt="M&H Plumbing & Heating Logo" 
+              className="h-14 sm:h-16 w-auto object-contain py-1 rounded-full bg-slate-900 border border-slate-800"
             />
+            <div className="hidden sm:block">
+              <span className="font-heading font-black text-lg tracking-tight text-white block leading-none">
+                M&H PLUMBING
+              </span>
+              <span className="text-[10px] font-extrabold text-red-500 uppercase tracking-widest block mt-0.5">
+                & HEATING SPECIALISTS
+              </span>
+            </div>
           </a>
 
           {/* Desktop Nav Links */}
@@ -23,12 +31,12 @@ export default function TradeHeader({ onOpenQuote }) {
             <a href="#" className="hover:text-red-500 transition-colors">Home</a>
             <a href="#services" className="hover:text-red-500 transition-colors">Services</a>
             <a href="#why-us" className="hover:text-red-500 transition-colors">Why Choose Us</a>
-            <a href="#process" className="hover:text-red-500 transition-colors">Our Process</a>
+            <a href="#process" className="hover:text-red-500 transition-colors">Renovations</a>
             <a href="#reviews" className="hover:text-red-500 transition-colors">Reviews</a>
             <a href="#contact" className="hover:text-red-500 transition-colors">Contact Us</a>
           </nav>
 
-          {/* Action Button & Hamburger (Exact Image 2 Header Layout) */}
+          {/* Action Button & Hamburger */}
           <div className="flex items-center gap-3 sm:gap-4">
             <button
               onClick={onOpenQuote}
@@ -37,7 +45,6 @@ export default function TradeHeader({ onOpenQuote }) {
               <span>GET A QUOTE</span>
             </button>
 
-            {/* Red Hamburger Menu Toggle */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               className="lg:hidden p-2.5 rounded-md bg-red-600 text-white hover:bg-red-700 transition-colors"
@@ -57,14 +64,14 @@ export default function TradeHeader({ onOpenQuote }) {
             <a href="#" onClick={() => setMenuOpen(false)} className="py-2 hover:text-red-500">Home</a>
             <a href="#services" onClick={() => setMenuOpen(false)} className="py-2 hover:text-red-500">Services</a>
             <a href="#why-us" onClick={() => setMenuOpen(false)} className="py-2 hover:text-red-500">Why Choose Us</a>
-            <a href="#process" onClick={() => setMenuOpen(false)} className="py-2 hover:text-red-500">Our Process</a>
+            <a href="#process" onClick={() => setMenuOpen(false)} className="py-2 hover:text-red-500">Renovations</a>
             <a href="#reviews" onClick={() => setMenuOpen(false)} className="py-2 hover:text-red-500">Reviews</a>
             <a href="#contact" onClick={() => setMenuOpen(false)} className="py-2 hover:text-red-500">Contact Us</a>
           </nav>
           
           <div className="pt-4 border-t border-slate-800 space-y-3">
-            <a href="tel:07700900123" className="flex items-center justify-center gap-2 text-red-500 font-extrabold text-base">
-              <Phone className="w-4 h-4" /> 07700 900123
+            <a href="tel:07700900888" className="flex items-center justify-center gap-2 text-red-500 font-extrabold text-base">
+              <Phone className="w-4 h-4" /> 07700 900888
             </a>
           </div>
         </div>

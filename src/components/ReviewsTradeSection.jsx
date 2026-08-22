@@ -6,12 +6,11 @@ export default function ReviewsTradeSection() {
     <section id="reviews" className="py-20 bg-white font-sans text-slate-900 border-t border-slate-200">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
         
-        {/* Title with Red Underline (Matching Image 2 "WHAT OUR CLIENTS SAY") */}
         <h2 className="text-3xl sm:text-4xl font-heading font-black uppercase tracking-tight heading-underline mb-8">
           WHAT OUR CLIENTS SAY
         </h2>
 
-        {/* Google 5-Star Badge (Exact Image 2 Google rating badge) */}
+        {/* Google 5-Star Badge */}
         <div className="bg-slate-50 border border-slate-200 p-4 rounded-lg inline-flex flex-col items-center gap-2 mb-10 shadow-sm">
           <span className="font-extrabold text-sm text-slate-800 uppercase tracking-wide">5 STAR RATED ON</span>
           <div className="flex text-amber-400 gap-1">
@@ -30,15 +29,15 @@ export default function ReviewsTradeSection() {
           </div>
         </div>
 
-        {/* Verified Customer Review Card (Matching Image 2 Review Card layout) */}
+        {/* Customer Review Card */}
         <div className="bg-slate-50 p-6 sm:p-8 rounded-lg border border-slate-200 shadow-md text-left max-w-xl mx-auto space-y-4 mb-8">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-purple-700 text-white font-bold flex items-center justify-center text-sm">
+            <div className="w-10 h-10 rounded-full bg-red-600 text-white font-bold flex items-center justify-center text-sm">
               M
             </div>
             <div>
-              <h4 className="font-extrabold text-sm text-slate-900">Mark Jenkins</h4>
-              <p className="text-xs text-slate-500">Verified Google Review</p>
+              <h4 className="font-extrabold text-sm text-slate-900">Michael & Sarah T.</h4>
+              <p className="text-xs text-slate-500">Liverpool • Verified Google Review</p>
             </div>
           </div>
 
@@ -49,11 +48,10 @@ export default function ReviewsTradeSection() {
           </div>
 
           <p className="text-slate-700 text-sm leading-relaxed italic">
-            "Another amazing bathroom transformation completed by DomBathroomsLTD! From stripping out the old bathroom through the refurbishment process to a fresh, modern and beautifully finished space. Professional & tidy workmanship, fast turnaround, quality finish, clear and honest communication at competitive prices!"
+            "M&H Plumbing & Heating completely renovated our bathroom and carried out all precision tiling and pipework. Outstanding quality finish, fast turnaround, clean workspace every day, and very competitive prices!"
           </p>
         </div>
 
-        {/* Green Button (Exact copy of Green "Review us on Google" button in Image 2) */}
         <div>
           <a
             href="#contact"

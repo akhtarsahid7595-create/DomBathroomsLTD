@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
 export default function ContactBar() {
   return (
@@ -7,24 +7,24 @@ export default function ContactBar() {
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10 text-xs sm:text-sm font-bold uppercase tracking-wider">
         
         <a 
-          href="tel:07700900123" 
+          href="tel:07700900888" 
           className="flex items-center gap-2 hover:text-slate-100 transition-colors"
         >
           <Phone className="w-4 h-4 fill-white text-red-600 shrink-0" />
-          <span>CALL US: 07700 900123</span>
+          <span>CALL US: 07700 900888</span>
         </a>
 
         <a 
-          href="mailto:info@dombathroomsltd.co.uk" 
+          href="mailto:info@mhplumbingheating.co.uk" 
           className="flex items-center gap-2 hover:text-slate-100 transition-colors"
         >
           <Mail className="w-4 h-4 text-white shrink-0" />
-          <span>EMAIL US: INFO@DOMBATHROOMSLTD.CO.UK</span>
+          <span>EMAIL: INFO@MHPLUMBINGHEATING.CO.UK</span>
         </a>
 
         <div className="flex items-center gap-2 hidden md:flex">
-          <Clock className="w-4 h-4 text-white shrink-0" />
-          <span>MON - SAT: 8:00 AM - 6:00 PM</span>
+          <MapPin className="w-4 h-4 text-white shrink-0" />
+          <span>LIVERPOOL, NORTH WEST & NORTH WALES</span>
         </div>
 
       </div>

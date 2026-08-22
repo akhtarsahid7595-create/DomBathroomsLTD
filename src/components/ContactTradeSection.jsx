@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Send, CheckCircle2 } from 'lucide-react';
+import { Send, CheckCircle2 } from 'lucide-react';
 
 export default function ContactTradeSection({ onOpenQuote }) {
   const [submitted, setSubmitted] = useState(false);
@@ -14,13 +14,12 @@ export default function ContactTradeSection({ onOpenQuote }) {
     <section id="contact" className="py-20 bg-slate-950 text-white font-sans border-t border-slate-800">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
         
-        {/* Title with Red Underline (Matching Image 2 "CONTACT US" block) */}
         <h2 className="text-3xl sm:text-4xl font-heading font-black uppercase tracking-tight heading-underline mb-6">
-          CONTACT US
+          CONTACT M&H PLUMBING
         </h2>
 
         <p className="text-slate-300 text-sm sm:text-base max-w-xl mx-auto mb-10 leading-relaxed">
-          Thinking about transforming your bathroom? Message DomBathroomsLTD today for a FREE quote and let's turn your old bathroom into something you'll love!
+          Need bathroom renovations, plumbing, or precision tiling in Liverpool, North West, or North Wales? Send us a message today for a FREE quote!
         </p>
 
         {submitted ? (
@@ -28,7 +27,7 @@ export default function ContactTradeSection({ onOpenQuote }) {
             <CheckCircle2 className="w-12 h-12 text-emerald-500 mx-auto" />
             <h3 className="text-xl font-heading font-bold text-white">THANK YOU! MESSAGE RECEIVED</h3>
             <p className="text-slate-400 text-sm">
-              We have received your message and will get back to you shortly with your free quotation.
+              M&H Plumbing & Heating will get back to you shortly with your free quotation.
             </p>
             <button
               onClick={() => setSubmitted(false)}
@@ -46,7 +45,7 @@ export default function ContactTradeSection({ onOpenQuote }) {
                 <input 
                   type="text" 
                   required 
-                  placeholder="e.g. John Smith"
+                  placeholder="e.g. David Williams"
                   value={form.name}
                   onChange={(e) => setForm({...form, name: e.target.value})}
                   className="w-full bg-slate-950 border border-slate-800 rounded px-4 py-3 text-sm text-white focus:outline-none focus:border-red-600"
@@ -58,7 +57,7 @@ export default function ContactTradeSection({ onOpenQuote }) {
                 <input 
                   type="tel" 
                   required 
-                  placeholder="e.g. 07700 900123"
+                  placeholder="e.g. 07700 900888"
                   value={form.phone}
                   onChange={(e) => setForm({...form, phone: e.target.value})}
                   className="w-full bg-slate-950 border border-slate-800 rounded px-4 py-3 text-sm text-white focus:outline-none focus:border-red-600"
@@ -70,7 +69,7 @@ export default function ContactTradeSection({ onOpenQuote }) {
               <label className="block text-xs font-extrabold text-slate-300 uppercase mb-1">EMAIL ADDRESS</label>
               <input 
                 type="email" 
-                placeholder="e.g. john@example.com"
+                placeholder="e.g. david@example.com"
                 value={form.email}
                 onChange={(e) => setForm({...form, email: e.target.value})}
                 className="w-full bg-slate-950 border border-slate-800 rounded px-4 py-3 text-sm text-white focus:outline-none focus:border-red-600"
@@ -81,14 +80,13 @@ export default function ContactTradeSection({ onOpenQuote }) {
               <label className="block text-xs font-extrabold text-slate-300 uppercase mb-1">PROJECT DETAILS</label>
               <textarea 
                 rows={3} 
-                placeholder="Describe your bathroom project..."
+                placeholder="Describe your bathroom renovation or plumbing project..."
                 value={form.message}
                 onChange={(e) => setForm({...form, message: e.target.value})}
                 className="w-full bg-slate-950 border border-slate-800 rounded px-4 py-3 text-sm text-white focus:outline-none focus:border-red-600"
               />
             </div>
 
-            {/* Red Button (Exact copy of CONTACT US button in Image 2) */}
             <button
               type="submit"
               className="w-full bg-red-600 hover:bg-red-700 text-white font-extrabold text-sm py-4 rounded uppercase tracking-wider transition-colors shadow-md flex items-center justify-center gap-2"
