@@ -8,12 +8,13 @@ export default {
     extend: {
       colors: {
         trade: {
-          red: "#dc2626", // Primary Trade Red like Reference Image 2
-          "red-dark": "#b91c1c",
-          "red-light": "#ef4444",
-          dark: "#0f172a", // Dark charcoal for headers & contact
+          blue: "#2563eb", // Primary Ocean Royal Blue
+          "blue-dark": "#1d4ed8",
+          "blue-light": "#38bdf8",
+          sky: "#0284c7",
+          dark: "#0f172a", // Dark navy for footer & overlays
           charcoal: "#1e293b",
-          light: "#f8fafc", // Section background
+          light: "#f0f9ff", // Light blue-tinted white section background
           border: "#e2e8f0",
         }
       },

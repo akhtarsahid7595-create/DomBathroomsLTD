@@ -17,11 +17,11 @@ export default function TradeFooter({ onOpenQuote }) {
             />
 
             <p className="text-xs text-slate-400 leading-relaxed">
-              Peter's Window Cleaning Services (Peter Reddin). Pure water hot wash window cleaning &amp; all-year outdoor exterior power washing. 6, 8, or 12 weeks rotation schedules available.
+              Peter's Window Cleaning Services (Peter &amp; Suzanne Reddin). Pure water hot wash window cleaning &amp; all-year outdoor exterior power washing. 6, 8, or 12 weeks rotation schedules available.
             </p>
 
             <div className="flex items-center gap-3 text-white pt-2">
-              <a href="https://instagram.com/peterswindowcleaningservices" target="_blank" rel="noreferrer" className="w-8 h-8 rounded-full bg-slate-900 hover:bg-red-600 flex items-center justify-center transition-colors">
+              <a href="https://instagram.com/peterswindowcleaningservices" target="_blank" rel="noreferrer" className="w-8 h-8 rounded-full bg-slate-900 hover:bg-blue-600 flex items-center justify-center transition-colors">
                 <Instagram className="w-4 h-4" />
               </a>
               <a href="https://wa.me/353867858590" className="w-8 h-8 rounded-full bg-slate-900 hover:bg-emerald-600 flex items-center justify-center transition-colors">
@@ -34,16 +34,20 @@ export default function TradeFooter({ onOpenQuote }) {
           <div className="space-y-3">
             <h4 className="text-sm font-heading font-black text-white uppercase tracking-wider mb-4">CONTACT DETAILS</h4>
             <div className="flex items-center gap-2.5 text-xs">
-              <Phone className="w-4 h-4 text-red-500 shrink-0" />
-              <a href="tel:0867858590" className="text-white hover:text-red-500 font-bold">086 785 8590</a>
+              <Phone className="w-4 h-4 text-blue-400 shrink-0" />
+              <a href="tel:0867858590" className="text-white hover:text-blue-400 font-bold">Mobile: 086 785 8590</a>
             </div>
             <div className="flex items-center gap-2.5 text-xs">
-              <Globe className="w-4 h-4 text-red-500 shrink-0" />
-              <span className="text-white font-bold">peterswindowcleaning.com</span>
+              <Phone className="w-4 h-4 text-blue-400 shrink-0" />
+              <a href="tel:018499468" className="text-white hover:text-blue-400 font-bold">Office: 01 849 9468</a>
             </div>
-            <div className="flex items-start gap-2.5 text-xs">
-              <MapPin className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
-              <span>Residential &amp; Commercial Outdoor Cleaning</span>
+            <div className="flex items-center gap-2.5 text-xs">
+              <Mail className="w-4 h-4 text-blue-400 shrink-0" />
+              <a href="mailto:info@peterswindowcleaning.com" className="text-white hover:text-blue-400 font-bold">info@peterswindowcleaning.com</a>
+            </div>
+            <div className="flex items-center gap-2.5 text-xs">
+              <Globe className="w-4 h-4 text-blue-400 shrink-0" />
+              <span className="text-white font-bold">peterswindowcleaning.com</span>
             </div>
           </div>
 
@@ -51,11 +55,11 @@ export default function TradeFooter({ onOpenQuote }) {
           <div>
             <h4 className="text-sm font-heading font-black text-white uppercase tracking-wider mb-4">QUICK LINKS</h4>
             <ul className="space-y-2 text-xs font-bold uppercase tracking-wider text-slate-300">
-              <li><a href="#" className="hover:text-red-500 transition-colors">Home</a></li>
-              <li><a href="#services" className="hover:text-red-500 transition-colors">Hot Wash Cleaning</a></li>
-              <li><a href="#why-us" className="hover:text-red-500 transition-colors">Why Choose Us</a></li>
-              <li><a href="#process" className="hover:text-red-500 transition-colors">Pure Water System</a></li>
-              <li><a href="#reviews" className="hover:text-red-500 transition-colors">Google Reviews</a></li>
+              <li><a href="#" className="hover:text-blue-400 transition-colors">Home</a></li>
+              <li><a href="#services" className="hover:text-blue-400 transition-colors">Hot Wash Cleaning</a></li>
+              <li><a href="#why-us" className="hover:text-blue-400 transition-colors">Why Choose Us</a></li>
+              <li><a href="#process" className="hover:text-blue-400 transition-colors">Pure Water System</a></li>
+              <li><a href="#reviews" className="hover:text-blue-400 transition-colors">Google Reviews</a></li>
             </ul>
           </div>
 
@@ -64,10 +68,11 @@ export default function TradeFooter({ onOpenQuote }) {
             <h4 className="text-sm font-heading font-black text-white uppercase tracking-wider mb-4">OUR SERVICES</h4>
             <ul className="space-y-2 text-xs text-slate-400">
               <li>Hot Wash Window Cleaning</li>
+              <li>Gutter Cleaning (10% Off MLN9)</li>
               <li>Hard to Reach Velux Windows</li>
+              <li>Solar Panel Cleaning</li>
               <li>6 / 8 / 12 Weeks Rotations</li>
-              <li>Outdoor Pressure Washing</li>
-              <li>Fascia, Soffit &amp; Gutter Clean</li>
+              <li>Driveway / Patio Surface Wash</li>
             </ul>
           </div>
 
@@ -75,7 +80,7 @@ export default function TradeFooter({ onOpenQuote }) {
 
         {/* Copyright Line */}
         <div className="pt-8 text-center text-xs text-slate-500">
-          <p>© {new Date().getFullYear()} PETER'S WINDOW CLEANING SERVICES (Peter Reddin). All Rights Reserved.</p>
+          <p>© {new Date().getFullYear()} PETER'S WINDOW CLEANING SERVICES (Peter &amp; Suzanne Reddin). All Rights Reserved.</p>
         </div>
 
       </div>
