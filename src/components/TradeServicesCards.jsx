@@ -1,22 +1,22 @@
 import React from 'react';
-import { Wrench, Bath, Grid } from 'lucide-react';
+import { Sparkles, Sun, Calendar } from 'lucide-react';
 
 export default function TradeServicesCards({ onOpenQuote }) {
   const services = [
     {
-      icon: Wrench,
-      title: "All Aspects of Plumbing",
-      desc: "Complete residential & commercial plumbing solutions, pipework installation, leak repair, sanitaryware fitting, and high-pressure system upgrades across Liverpool & North West.",
+      icon: Sparkles,
+      title: "Hot Wash Window Cleaning",
+      desc: "State-of-the-art pure water hot wash system for crystal clear, streak-free glass. Specialized in hard-to-reach windows, high Velux windows, and commercial glazing.",
     },
     {
-      icon: Bath,
-      title: "Bathroom Renovations",
-      desc: "Full end-to-end bathroom transformations, old suite strip-outs, luxury walk-in rain showers, freestanding bathtubs, and custom vanity unit installations.",
+      icon: Sun,
+      title: "All-Year Outdoor Cleaning",
+      desc: "High-pressure rotary surface cleaning for driveways, patios, paving, gutters, fascias, soffits, and moss removal for all weather conditions.",
     },
     {
-      icon: Grid,
-      title: "Precision Tiling",
-      desc: "Expert wall & floor tiling, hydrophobic waterproofing tanking, large format porcelain, ceramic metro tiles, herringbone patterns, and flawless silicone sealing.",
+      icon: Calendar,
+      title: "6 / 8 / 12 Weeks Rotations",
+      desc: "Flexible regular rotation schedules taken for residential homes and commercial premises. Guaranteed reliability and no-obligation estimates.",
     }
   ];
 
@@ -27,7 +27,7 @@ export default function TradeServicesCards({ onOpenQuote }) {
         {/* Section Title with Red Underline */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-heading font-black text-slate-900 uppercase tracking-tight heading-underline">
-            OUR PLUMBING & RENOVATION SERVICES
+            OUR WINDOW & EXTERIOR SERVICES
           </h2>
         </div>
 

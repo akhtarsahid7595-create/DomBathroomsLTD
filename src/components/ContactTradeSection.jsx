@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, CheckCircle2 } from 'lucide-react';
+import { Send, CheckCircle2, Phone, MessageCircle } from 'lucide-react';
 
 export default function ContactTradeSection({ onOpenQuote }) {
   const [submitted, setSubmitted] = useState(false);
@@ -15,19 +15,29 @@ export default function ContactTradeSection({ onOpenQuote }) {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
         
         <h2 className="text-3xl sm:text-4xl font-heading font-black uppercase tracking-tight heading-underline mb-6">
-          CONTACT M&H PLUMBING
+          CONTACT PETER'S WINDOW CLEANING
         </h2>
 
-        <p className="text-slate-300 text-sm sm:text-base max-w-xl mx-auto mb-10 leading-relaxed">
-          Need bathroom renovations, plumbing, or precision tiling in Liverpool, North West, or North Wales? Send us a message today for a FREE quote!
+        <p className="text-slate-300 text-sm sm:text-base max-w-xl mx-auto mb-8 leading-relaxed">
+          Need hard-to-reach windows washed or driveway pressure cleaning? Call, text, WhatsApp or fill out the form below for a FREE no obligation quote!
         </p>
+
+        {/* Quick Contact Buttons */}
+        <div className="flex flex-wrap items-center justify-center gap-4 mb-10 text-sm font-extrabold uppercase">
+          <a href="tel:0867858590" className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded flex items-center gap-2 shadow-md">
+            <Phone className="w-4 h-4" /> Call 086 785 8590
+          </a>
+          <a href="https://wa.me/353867858590" className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded flex items-center gap-2 shadow-md">
+            <MessageCircle className="w-4 h-4" /> WhatsApp Us
+          </a>
+        </div>
 
         {submitted ? (
           <div className="bg-slate-900 border border-slate-800 p-8 rounded-lg text-center space-y-4 max-w-xl mx-auto">
             <CheckCircle2 className="w-12 h-12 text-emerald-500 mx-auto" />
             <h3 className="text-xl font-heading font-bold text-white">THANK YOU! MESSAGE RECEIVED</h3>
             <p className="text-slate-400 text-sm">
-              M&H Plumbing & Heating will get back to you shortly with your free quotation.
+              Peter's Window Cleaning Services will review your message and get back to you with your no-obligation quote.
             </p>
             <button
               onClick={() => setSubmitted(false)}
@@ -45,7 +55,7 @@ export default function ContactTradeSection({ onOpenQuote }) {
                 <input 
                   type="text" 
                   required 
-                  placeholder="e.g. David Williams"
+                  placeholder="e.g. John Murphy"
                   value={form.name}
                   onChange={(e) => setForm({...form, name: e.target.value})}
                   className="w-full bg-slate-950 border border-slate-800 rounded px-4 py-3 text-sm text-white focus:outline-none focus:border-red-600"
@@ -53,11 +63,11 @@ export default function ContactTradeSection({ onOpenQuote }) {
               </div>
 
               <div>
-                <label className="block text-xs font-extrabold text-slate-300 uppercase mb-1">PHONE NUMBER *</label>
+                <label className="block text-xs font-extrabold text-slate-300 uppercase mb-1">PHONE / WHATSAPP *</label>
                 <input 
                   type="tel" 
                   required 
-                  placeholder="e.g. 07700 900888"
+                  placeholder="e.g. 086 785 8590"
                   value={form.phone}
                   onChange={(e) => setForm({...form, phone: e.target.value})}
                   className="w-full bg-slate-950 border border-slate-800 rounded px-4 py-3 text-sm text-white focus:outline-none focus:border-red-600"
@@ -66,21 +76,20 @@ export default function ContactTradeSection({ onOpenQuote }) {
             </div>
 
             <div>
-              <label className="block text-xs font-extrabold text-slate-300 uppercase mb-1">EMAIL ADDRESS</label>
-              <input 
-                type="email" 
-                placeholder="e.g. david@example.com"
-                value={form.email}
-                onChange={(e) => setForm({...form, email: e.target.value})}
-                className="w-full bg-slate-950 border border-slate-800 rounded px-4 py-3 text-sm text-white focus:outline-none focus:border-red-600"
-              />
+              <label className="block text-xs font-extrabold text-slate-300 uppercase mb-1">SERVICE NEEDED</label>
+              <select className="w-full bg-slate-950 border border-slate-800 rounded px-4 py-3 text-sm text-white focus:outline-none focus:border-red-600">
+                <option>Hot Wash Window Cleaning (6/8/12 Wk Rotation)</option>
+                <option>Hard-to-Reach / Velux Window Wash</option>
+                <option>Driveway & Patio Pressure Surface Wash</option>
+                <option>Gutter, Fascia & Soffit Cleaning</option>
+              </select>
             </div>
 
             <div>
-              <label className="block text-xs font-extrabold text-slate-300 uppercase mb-1">PROJECT DETAILS</label>
+              <label className="block text-xs font-extrabold text-slate-300 uppercase mb-1">PROPERTY DETAILS</label>
               <textarea 
                 rows={3} 
-                placeholder="Describe your bathroom renovation or plumbing project..."
+                placeholder="Tell us about your windows or exterior cleaning requirements..."
                 value={form.message}
                 onChange={(e) => setForm({...form, message: e.target.value})}
                 className="w-full bg-slate-950 border border-slate-800 rounded px-4 py-3 text-sm text-white focus:outline-none focus:border-red-600"
@@ -92,7 +101,7 @@ export default function ContactTradeSection({ onOpenQuote }) {
               className="w-full bg-red-600 hover:bg-red-700 text-white font-extrabold text-sm py-4 rounded uppercase tracking-wider transition-colors shadow-md flex items-center justify-center gap-2"
             >
               <Send className="w-4 h-4" />
-              <span>SEND MESSAGE</span>
+              <span>SEND NO OBLIGATION QUOTE REQUEST</span>
             </button>
           </form>
         )}

@@ -9,21 +9,13 @@ export default function TradeHeader({ onOpenQuote }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 sm:h-24">
           
-          {/* M&H Plumbing & Heating Logo Image */}
+          {/* Brand Logo */}
           <a href="#" className="flex items-center gap-3">
             <img 
-              src="/mh_logo.png" 
-              alt="M&H Plumbing & Heating Logo" 
-              className="h-14 sm:h-16 w-auto object-contain py-1 rounded-full bg-slate-900 border border-slate-800"
+              src="/peter_logo.svg" 
+              alt="Peter's Window Cleaning Services Logo" 
+              className="h-14 sm:h-16 w-auto object-contain py-1"
             />
-            <div className="hidden sm:block">
-              <span className="font-heading font-black text-lg tracking-tight text-white block leading-none">
-                M&H PLUMBING
-              </span>
-              <span className="text-[10px] font-extrabold text-red-500 uppercase tracking-widest block mt-0.5">
-                & HEATING SPECIALISTS
-              </span>
-            </div>
           </a>
 
           {/* Desktop Nav Links */}
@@ -31,7 +23,7 @@ export default function TradeHeader({ onOpenQuote }) {
             <a href="#" className="hover:text-red-500 transition-colors">Home</a>
             <a href="#services" className="hover:text-red-500 transition-colors">Services</a>
             <a href="#why-us" className="hover:text-red-500 transition-colors">Why Choose Us</a>
-            <a href="#process" className="hover:text-red-500 transition-colors">Renovations</a>
+            <a href="#process" className="hover:text-red-500 transition-colors">Hot Wash Tech</a>
             <a href="#reviews" className="hover:text-red-500 transition-colors">Reviews</a>
             <a href="#contact" className="hover:text-red-500 transition-colors">Contact Us</a>
           </nav>
@@ -64,14 +56,14 @@ export default function TradeHeader({ onOpenQuote }) {
             <a href="#" onClick={() => setMenuOpen(false)} className="py-2 hover:text-red-500">Home</a>
             <a href="#services" onClick={() => setMenuOpen(false)} className="py-2 hover:text-red-500">Services</a>
             <a href="#why-us" onClick={() => setMenuOpen(false)} className="py-2 hover:text-red-500">Why Choose Us</a>
-            <a href="#process" onClick={() => setMenuOpen(false)} className="py-2 hover:text-red-500">Renovations</a>
+            <a href="#process" onClick={() => setMenuOpen(false)} className="py-2 hover:text-red-500">Hot Wash Tech</a>
             <a href="#reviews" onClick={() => setMenuOpen(false)} className="py-2 hover:text-red-500">Reviews</a>
             <a href="#contact" onClick={() => setMenuOpen(false)} className="py-2 hover:text-red-500">Contact Us</a>
           </nav>
           
           <div className="pt-4 border-t border-slate-800 space-y-3">
-            <a href="tel:07700900888" className="flex items-center justify-center gap-2 text-red-500 font-extrabold text-base">
-              <Phone className="w-4 h-4" /> 07700 900888
+            <a href="tel:0867858590" className="flex items-center justify-center gap-2 text-red-500 font-extrabold text-base">
+              <Phone className="w-4 h-4" /> 086 785 8590
             </a>
           </div>
         </div>

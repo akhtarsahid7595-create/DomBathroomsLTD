@@ -33,11 +33,11 @@ export default function ReviewsTradeSection() {
         <div className="bg-slate-50 p-6 sm:p-8 rounded-lg border border-slate-200 shadow-md text-left max-w-xl mx-auto space-y-4 mb-8">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-red-600 text-white font-bold flex items-center justify-center text-sm">
-              M
+              P
             </div>
             <div>
-              <h4 className="font-extrabold text-sm text-slate-900">Michael & Sarah T.</h4>
-              <p className="text-xs text-slate-500">Liverpool • Verified Google Review</p>
+              <h4 className="font-extrabold text-sm text-slate-900">Patrick & Mary Walsh</h4>
+              <p className="text-xs text-slate-500">Verified Client Review</p>
             </div>
           </div>
 
@@ -48,7 +48,7 @@ export default function ReviewsTradeSection() {
           </div>
 
           <p className="text-slate-700 text-sm leading-relaxed italic">
-            "M&H Plumbing & Heating completely renovated our bathroom and carried out all precision tiling and pipework. Outstanding quality finish, fast turnaround, clean workspace every day, and very competitive prices!"
+            "Peter's Window Cleaning Services does a fantastic job on our 8-week rotation! The hot wash system leaves hard-to-reach skylights and high Velux windows spotless with zero streaks. Punctual, polite, and great value!"
           </p>
         </div>
 
