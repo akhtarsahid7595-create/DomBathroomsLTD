@@ -5,61 +5,68 @@
 @layer base {
   body {
     font-family: 'Inter', sans-serif;
-    color: #1e293b;
+    color: #334155;
     background-color: #ffffff;
+    font-weight: 300;
   }
   
   h1, h2, h3, h4, h5, h6, .font-heading {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
   }
 }
 
-/* White & Blue Trade Theme Accent Utilities */
-.bg-trade-blue {
-  background-color: #2563eb;
+/* Minimalist Card & Hover Utilities */
+.rosewood-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.text-trade-blue {
-  color: #2563eb;
+.rosewood-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+  transform: translateY(-2px);
 }
 
-.border-trade-blue {
-  border-color: #2563eb;
-}
-
-/* Blue underline heading style */
-.heading-underline {
-  position: relative;
-  display: inline-block;
-}
-
-.heading-underline::after {
-  content: '';
-  display: block;
-  width: 50px;
-  height: 4px;
-  background-color: #2563eb;
-  margin: 12px auto 0 auto;
-  border-radius: 2px;
-}
-
-/* Circular badge icon with Royal Blue border */
-.trade-icon-badge {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  border: 2px solid #2563eb;
-  background-color: #ffffff;
-  display: flex;
+/* Minimalist Button Styling */
+.btn-rosewood-primary {
+  background-color: #1d4ed8;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.875rem 2rem;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #2563eb;
-  margin: 0 auto 20px auto;
-  transition: all 0.3s ease;
 }
 
-.trade-icon-badge:hover {
-  background-color: #2563eb;
+.btn-rosewood-primary:hover {
+  background-color: #1e40af;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 15px -3px rgba(29, 78, 216, 0.25);
+}
+
+.btn-rosewood-secondary {
+  background-color: rgba(255, 255, 255, 0.15);
   color: #ffffff;
-  transform: scale(1.05);
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.875rem 2rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-rosewood-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.7);
 }
