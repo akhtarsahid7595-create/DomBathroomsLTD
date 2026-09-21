@@ -1,121 +1,123 @@
 import React from 'react';
-import { CheckCircle2, Star, ArrowRight, ShieldCheck, Clock, MessageSquare, Tag, ThumbsUp } from 'lucide-react';
 
-export default function Hero({ onOpenBooking }) {
-  const highlights = [
-    { title: "Full bathroom refurbishments", desc: "Complete strip-out, plumbing, structural prep & luxury fit", icon: CheckCircle2 },
-    { title: "Professional & tidy workmanship", desc: "Clean workspace every day, floor protection & dust control", icon: CheckCircle2 },
-    { title: "Fast turnaround", desc: "Efficient scheduling so your home is back to normal quickly", icon: CheckCircle2 },
-    { title: "Quality finish", desc: "Meticulous tile alignment, flawless sealing & luxury hardware", icon: CheckCircle2 },
-    { title: "Clear and honest communication", desc: "Daily progress updates, no hidden surprises or sudden costs", icon: CheckCircle2 },
-    { title: "Competitive prices", desc: "Transparent fixed-price quotations tailored to your budget", icon: CheckCircle2 },
-  ];
-
+export default function Hero({ onOpenQuote }) {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center bg-slate-950 overflow-hidden py-16 lg:py-24">
-      {/* Background Image with Dark Vignette Overlay (Image 2 style) */}
+    <section className="relative min-h-[90vh] flex items-center bg-[#0B0F17] overflow-hidden py-16 lg:py-24 border-b border-slate-800/80">
+      {/* High-Res Roof Background Image with Multi-stage Gradient Overlay */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src="/hero_luxury_bathroom.jpg" 
-          alt="Luxury Bathroom Transformation by DomBathroomsLTD" 
-          className="w-full h-full object-cover object-center filter brightness-90 contrast-105"
+        <img
+          src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?q=80&w=2070&auto=format&fit=crop"
+          alt="Evercrest Roofing Slate Roof Ireland"
+          className="w-full h-full object-cover object-center brightness-75 scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/85 to-slate-950/60 lg:to-slate-950/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0B0F17] via-[#0B0F17]/90 to-[#0B0F17]/70 lg:to-[#0B0F17]/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F17] via-transparent to-[#0B0F17]/60" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
-          {/* Left Column - Main Copy (Image 2 Inspired Typography) */}
+          {/* Left Column: High Luxury Contrast Headline & CTA */}
           <div className="lg:col-span-7 space-y-6 text-left">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 font-semibold text-xs uppercase tracking-wider backdrop-blur-md">
-              <Star className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
-              <span>DomBathroomsLTD Transformation Specialists</span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 backdrop-blur-md">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span className="text-xs font-bold uppercase tracking-wider text-emerald-300">
+                PROUDLY IRISH & LOCALLY OWNED ☘️
+              </span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white leading-[1.1] tracking-tight">
-              Trustworthy & professional bathroom renovators
-            </h1>
+            <div className="space-y-2">
+              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-light text-white tracking-tight leading-none font-heading">
+                STRONG ROOFS. <br />
+                <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-emerald-300 to-teal-200">
+                  SAFE HOMES.
+                </span>
+              </h1>
+              <p className="font-script text-3xl sm:text-4xl text-emerald-400 font-normal pt-2">
+                Built for Ireland.
+              </p>
+            </div>
 
-            {/* Handwritten script style accent line (Image 2 matching) */}
-            <p className="font-script text-3xl sm:text-4xl text-pink-400 font-bold tracking-wide transform -rotate-1 pl-1">
-              Stripping Out • Refurbishing • Beautiful Finish ♥
+            <p className="text-slate-300 text-base sm:text-lg max-w-xl font-light leading-relaxed">
+              From emergency leaks to complete slate re-roofing, Evercrest Roofing delivers 
+              unmatched craftsmanship built to withstand harsh Irish weather. Fully insured, local, and 100% guaranteed.
             </p>
 
-            <p className="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed font-normal">
-              From stripping out the old bathroom, through the complete refurbishment process, to a fresh, modern and beautifully finished new space — <strong className="text-white font-semibold">we take care of the whole transformation.</strong>
-            </p>
-
-            {/* CTA Group */}
-            <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-              <button
-                onClick={onOpenBooking}
-                className="bg-white text-slate-950 hover:bg-slate-100 font-extrabold px-8 py-4 rounded-full shadow-2xl shadow-white/20 transition-all duration-200 text-base flex items-center justify-center gap-3 group active:scale-95"
-              >
-                <span>Get a free quote</span>
-                <ArrowRight className="w-5 h-5 text-amber-600 group-hover:translate-x-1 transition-transform" />
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+              <button onClick={onOpenQuote} className="pill-btn-emerald text-base py-4 px-8">
+                <span>GET A FREE QUOTE</span>
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
               </button>
-
-              <a
-                href="#before-after"
-                className="bg-slate-900/80 hover:bg-slate-800 text-slate-200 border border-slate-700 font-bold px-6 py-4 rounded-full transition-all duration-200 text-base text-center backdrop-blur-md"
+              
+              <a 
+                href="#services" 
+                className="pill-btn-outline text-base py-4 px-8 text-center"
               >
-                View Transformations
+                View Services
               </a>
             </div>
 
-            {/* Quote badge */}
-            <div className="pt-2 flex items-center gap-3 text-amber-300/90 text-sm font-semibold italic">
-              <div className="flex text-amber-400">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-amber-400" />
-                ))}
+            <div className="pt-6 flex flex-wrap items-center gap-6 text-xs text-slate-400 border-t border-slate-800/80">
+              <div className="flex items-center gap-2">
+                <span className="text-emerald-400 font-bold text-sm">✓</span>
+                <span>No Obligation Quotes</span>
               </div>
-              <span>"Quality work. Great results. Happy customers."</span>
+              <div className="flex items-center gap-2">
+                <span className="text-emerald-400 font-bold text-sm">✓</span>
+                <span>24/7 Emergency Call Out</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-emerald-400 font-bold text-sm">✓</span>
+                <span>20-Year Guarantee</span>
+              </div>
             </div>
           </div>
 
-          {/* Right Column - Feature Checkmarks Box (Exact Image 1 Checkmarks + Image 2 right list) */}
+          {/* Right Column: Hero Checkmark Card List (Pattern 1) */}
           <div className="lg:col-span-5">
-            <div className="glass-panel p-6 sm:p-8 rounded-3xl shadow-2xl border border-slate-700/60 relative overflow-hidden group">
-              <div className="absolute -top-12 -right-12 w-40 h-40 bg-amber-500/10 rounded-full blur-3xl group-hover:bg-amber-500/20 transition-all" />
-              
-              <div className="flex items-center justify-between mb-6 pb-4 border-b border-slate-800">
-                <div>
-                  <h3 className="text-xl font-heading font-bold text-white">Why DomBathroomsLTD?</h3>
-                  <p className="text-xs text-slate-400">Complete peace of mind for your refurbishment</p>
-                </div>
-                <span className="bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
-                  <ShieldCheck className="w-3.5 h-3.5" /> Guaranteed
-                </span>
+            <div className="obsidian-card p-6 sm:p-8 backdrop-blur-xl border border-emerald-500/20 bg-[#131924]/90 shadow-2xl relative">
+              <div className="absolute -top-3 right-6 badge-gold shadow-md">
+                100% GUARANTEED
               </div>
 
-              {/* List from Instagram Post (Image 1) */}
-              <ul className="space-y-4">
-                {highlights.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3.5 group/item">
-                    <div className="mt-0.5 w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-500/30 group-hover/item:scale-110 transition-transform">
-                      <CheckCircle2 className="w-4 h-4 fill-emerald-500 text-slate-950" />
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-bold text-white group-hover/item:text-amber-400 transition-colors">
-                        {item.title}
-                      </h4>
-                      <p className="text-xs text-slate-400 leading-snug mt-0.5">{item.desc}</p>
-                    </div>
+              <h2 className="text-xl font-bold text-white mb-2 font-heading">
+                Our Expert Services
+              </h2>
+              <p className="text-xs text-slate-400 mb-6">
+                Complete roofing & exterior solutions for homes across Ireland.
+              </p>
+
+              <ul className="space-y-3.5">
+                {[
+                  "Roof Repairs & Full Replacement",
+                  "Flat Roofing Specialists (EPDM & Felt)",
+                  "Dry Verge & Ridge Systems",
+                  "Chimney & Valley Repairs",
+                  "Roof Cleaning & Biological Treatment",
+                  "UPVC Fascia, Soffit & Guttering",
+                  "24/7 Emergency Call Out Service"
+                ].map((service, idx) => (
+                  <li key={idx} className="flex items-center gap-3 text-sm text-slate-200 group">
+                    <span className="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs shrink-0 group-hover:bg-emerald-500 group-hover:text-black transition-colors">
+                      ✓
+                    </span>
+                    <span className="font-medium">{service}</span>
                   </li>
                 ))}
               </ul>
 
-              {/* Bottom Quote Banner */}
-              <div className="mt-6 pt-4 border-t border-slate-800/80 bg-slate-900/60 -mx-6 -mb-6 p-4 rounded-b-3xl flex items-center justify-between text-xs text-slate-300">
-                <span className="font-semibold">Thinking about transforming your bathroom?</span>
+              <div className="mt-8 pt-6 border-t border-slate-800 flex items-center justify-between">
+                <div>
+                  <span className="text-xs text-slate-400 block">Need Urgent Repair?</span>
+                  <span className="text-sm font-bold text-white">Call 24/7 Dispatch</span>
+                </div>
                 <button
-                  onClick={onOpenBooking}
-                  className="text-amber-400 font-bold hover:underline flex items-center gap-1"
+                  onClick={onOpenQuote}
+                  className="px-4 py-2 rounded-full bg-emerald-500/20 text-emerald-300 hover:bg-emerald-500 hover:text-black transition-colors text-xs font-bold"
                 >
-                  Book Free Survey &rarr;
+                  Contact Now
                 </button>
               </div>
             </div>

@@ -1,127 +1,157 @@
 import React from 'react';
-import { Wrench, Grid, Droplets, Zap, ShieldCheck, Flame, ArrowUpRight } from 'lucide-react';
 
-export default function ServicesSection({ onOpenBooking }) {
+export default function ServicesSection({ onOpenQuote }) {
   const services = [
     {
-      icon: Wrench,
-      title: "Full Bathroom Refurbishments",
-      badge: "Most Popular",
-      desc: "Complete end-to-end transformation from initial demolition & strip-out to final high-end silicone seals and hardware.",
-      features: ["Complete strip-out & waste disposal", "Structural & plasterboard prep", "Full suite & sanitaryware fitting"]
+      title: "Roof Repairs & Replacement",
+      desc: "From missing slate fixes to complete re-roofing projects. We work with natural slate, clay tiles, and modern concrete roofing.",
+      badge: "MOST REQUESTED",
+      icon: (
+        <svg className="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V10" />
+        </svg>
+      )
     },
     {
-      icon: Grid,
-      title: "Precision Tiling & Waterproofing",
-      badge: "Expert Craftsmen",
-      desc: "Flawless wall & floor tiling with large format porcelain, natural stone, marble herringbone, and certified hydrophobic tanking.",
-      features: ["Certified wetroom waterproofing", "Large format & metro tiling", "Laser-guided tile leveling"]
+      title: "Flat Roofing Specialists",
+      desc: "Seamless EPDM rubber membrane, high-performance felt, and fiberglass flat roofs designed to withstand standing water.",
+      badge: "WEATHERPROOF",
+      icon: (
+        <svg className="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+        </svg>
+      )
     },
     {
-      icon: Droplets,
-      title: "Luxury Walk-In Showers & Wetrooms",
-      badge: "Luxury Upgrade",
-      desc: "Convert awkward bath layouts into sleek frameless glass walk-in rain shower enclosures with linear channel drainage.",
-      features: ["Custom recessed LED niches", "Thermostatic dual rain showers", "Flush low-profile trays"]
+      title: "Dry Verge & Ridge Systems",
+      desc: "Maintenance-free dry verge caps and dry ridge systems. Protect your roof edges without decaying mortar lines.",
+      badge: "ZERO MAINTENANCE",
+      icon: (
+        <svg className="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+      )
     },
     {
-      icon: Flame,
-      title: "Underfloor Heating & Radiators",
-      badge: "Comfort",
-      desc: "Keep your feet warm all winter with smart digital electric or water underfloor heating systems and designer heated towel rails.",
-      features: ["Smart touchscreen thermostats", "Designer towel warmer rails", "Energy efficient heating mats"]
+      title: "Chimney & Valley Repairs",
+      desc: "Chimney repointing, lead flashing replacement, chimney cap installation, and valley water channel restoration.",
+      badge: "LEAK PROTECTION",
+      icon: (
+        <svg className="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m3 0h1" />
+        </svg>
+      )
     },
     {
-      icon: Zap,
-      title: "Bespoke Lighting & Electrical",
-      badge: "Ambience",
-      desc: "Integrated mood lighting, anti-fog LED demister mirrors, shaver sockets, and IP65 waterproof recessed ceiling downlights.",
-      features: ["Dimmable ceiling downlights", "Demisting smart mirrors", "PIR sensor night lighting"]
+      title: "Roof Cleaning & Treatment",
+      desc: "Soft wash moss removal, lichen treatment, and biocide protective coating to extend your roof's lifespan.",
+      badge: "APPEARANCE & CARE",
+      icon: (
+        <svg className="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+        </svg>
+      )
     },
     {
-      icon: ShieldCheck,
-      title: "Plumbing & Sanitaryware Fitting",
-      badge: "Quality Guaranteed",
-      desc: "Expert plumbing rerouting, wall-hung toilets, concealed cisterns, double vanity basins, and high-pressure pumps.",
-      features: ["Concealed cistern plumbing", "Wall-hung vanity installation", "High-flow pressure boost pumps"]
+      title: "UPVC Fascia, Soffit & Guttering",
+      desc: "Full installation, replacement, and unblocking of UPVC guttering, fascia boards, and soffit ventilation systems.",
+      badge: "DRAINAGE",
+      icon: (
+        <svg className="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+      )
+    },
+    {
+      title: "Lead Work & Flashing",
+      desc: "Traditional sheet lead fitting for roof valleys, wall step flashing, and chimney aprons to prevent water ingress.",
+      badge: "HIGH PRECISION",
+      icon: (
+        <svg className="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 4a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2h6z" />
+        </svg>
+      )
+    },
+    {
+      title: "24/7 Emergency Call Out",
+      desc: "Storm damage response, emergency tarpaulin sealing, structural leak containment across all counties in Ireland.",
+      badge: "24/7 DISPATCH",
+      icon: (
+        <svg className="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      )
     }
   ];
 
   return (
-    <section id="services" className="py-24 bg-slate-950 relative">
+    <section id="services" className="py-20 bg-[#0B0F17] relative border-b border-slate-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-          <div className="max-w-2xl space-y-4">
-            <span className="text-amber-400 text-xs font-extrabold tracking-widest uppercase bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
-              Our Refurbishment Services
-            </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white tracking-tight">
-              We Take Care of the Whole Transformation
-            </h2>
-            <p className="text-slate-400 text-base sm:text-lg">
-              No need to manage multiple tradesmen. We handle demolition, plumbing, electrical, tiling, and joinery under one roof.
-            </p>
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider">
+            <span>OUR ROOFING SERVICES</span>
           </div>
 
-          <button
-            onClick={onOpenBooking}
-            className="bg-slate-800 hover:bg-slate-700 text-amber-300 font-bold px-6 py-3.5 rounded-full border border-slate-700 transition-colors shrink-0 text-sm flex items-center gap-2"
-          >
-            <span>Request Custom Service</span>
-            <ArrowUpRight className="w-4 h-4 text-amber-400" />
-          </button>
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-white font-heading tracking-tight">
+            Complete Roofing Solutions <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">
+              For Homes & Businesses Across Ireland
+            </span>
+          </h2>
+
+          <p className="text-slate-400 text-base font-light">
+            Every service is backed by guaranteed workmanship, high-grade Irish weather-tested materials, and fixed transparent quotes.
+          </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((item, idx) => {
-            const Icon = item.icon;
-            return (
-              <div 
-                key={idx}
-                className="bg-slate-900/80 border border-slate-800 hover:border-amber-500/50 p-8 rounded-3xl transition-all duration-300 hover:-translate-y-1.5 group flex flex-col justify-between shadow-xl relative overflow-hidden"
-              >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 rounded-bl-full group-hover:bg-amber-500/10 transition-colors" />
-
-                <div>
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 group-hover:bg-amber-500 group-hover:text-slate-950 transition-all duration-300 shadow-md">
-                      <Icon className="w-7 h-7" />
-                    </div>
-                    <span className="text-[11px] font-extrabold px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">
-                      {item.badge}
-                    </span>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {services.map((srv, idx) => (
+            <div 
+              key={idx}
+              className="obsidian-card p-6 flex flex-col justify-between group relative overflow-hidden"
+            >
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    {srv.icon}
                   </div>
-
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-amber-400 transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-slate-400 leading-relaxed mb-6">
-                    {item.desc}
-                  </p>
+                  <span className="text-[10px] font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20 uppercase tracking-wide">
+                    {srv.badge}
+                  </span>
                 </div>
 
-                <div className="pt-4 border-t border-slate-800/80 space-y-2">
-                  {item.features.map((feat, i) => (
-                    <div key={i} className="flex items-center gap-2 text-xs text-slate-300 font-medium">
-                      <div className="w-1.5 h-1.5 rounded-full bg-amber-400" />
-                      <span>{feat}</span>
-                    </div>
-                  ))}
+                <h3 className="text-lg font-bold text-white font-heading group-hover:text-emerald-300 transition-colors">
+                  {srv.title}
+                </h3>
 
-                  <button
-                    onClick={onOpenBooking}
-                    className="mt-4 w-full py-2.5 rounded-xl bg-slate-950 hover:bg-amber-500/10 text-amber-400 font-semibold text-xs transition-colors flex items-center justify-center gap-1 border border-slate-800 hover:border-amber-500/30"
-                  >
-                    <span>Get Quote for {item.title}</span>
-                    <ArrowUpRight className="w-3.5 h-3.5" />
-                  </button>
-                </div>
+                <p className="text-slate-400 text-xs leading-relaxed font-light">
+                  {srv.desc}
+                </p>
               </div>
-            );
-          })}
+
+              <div className="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-between text-xs">
+                <span className="text-slate-500 font-medium">Fixed Quote</span>
+                <button
+                  onClick={onOpenQuote}
+                  className="text-emerald-400 font-bold hover:text-emerald-300 flex items-center gap-1 group-hover:translate-x-1 transition-transform"
+                >
+                  Book Service →
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <button
+            onClick={onOpenQuote}
+            className="pill-btn-emerald py-4 px-8 text-sm"
+          >
+            Request a Free Site Inspection
+          </button>
         </div>
 
       </div>

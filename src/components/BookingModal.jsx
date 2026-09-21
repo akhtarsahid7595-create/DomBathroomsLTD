@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
-import { X, Calendar, CheckCircle2, Phone } from 'lucide-react';
 
 export default function BookingModal({ isOpen, onClose }) {
   const [submitted, setSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    service: 'Roof Repairs & Replacement',
+    location: '',
+    notes: ''
+  });
 
   if (!isOpen) return null;
 
@@ -12,90 +18,120 @@ export default function BookingModal({ isOpen, onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-fade-in font-sans">
-      <div className="bg-slate-900 border border-slate-800 rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative text-white">
+    <div className="fixed inset-0 z-[2000] flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fadeIn">
+      <div className="relative w-full max-w-lg rounded-2xl bg-[#131924] border border-emerald-500/30 p-6 sm:p-8 shadow-2xl overflow-hidden">
         
+        {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800"
+          className="absolute top-4 right-4 text-slate-400 hover:text-white p-2 rounded-full hover:bg-slate-800 transition-colors"
         >
-          <X className="w-6 h-6" />
+          ✕
         </button>
 
+        <div className="mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-bold uppercase tracking-wider mb-2">
+            <span>EVERCREST ROOFING IRELAND</span>
+          </div>
+          <h3 className="text-2xl font-bold text-white font-heading">
+            Request a Free Roof Quote
+          </h3>
+          <p className="text-xs text-slate-400 mt-1">
+            No obligation. We will review your project and get back to you promptly.
+          </p>
+        </div>
+
         {submitted ? (
-          <div className="text-center py-8 space-y-4">
-            <div className="w-16 h-16 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-full flex items-center justify-center mx-auto">
-              <CheckCircle2 className="w-10 h-10" />
+          <div className="py-8 text-center space-y-4">
+            <div className="w-12 h-12 rounded-full bg-emerald-500 text-black flex items-center justify-center font-bold text-xl mx-auto shadow-lg shadow-emerald-500/30">
+              ✓
             </div>
-            <h3 className="text-2xl font-heading font-bold text-white">CONSULTATION REQUEST RECEIVED!</h3>
-            <p className="text-sm text-slate-300">
-              Thank you! Peter or Suzanne will contact you shortly to confirm your no-obligation quote and rotation details.
+            <h4 className="text-lg font-bold text-white font-heading">Request Submitted!</h4>
+            <p className="text-xs text-slate-300">
+              Thank you {formData.name}. Our local roofing specialist will call you shortly.
             </p>
             <button
               onClick={() => {
                 setSubmitted(false);
                 onClose();
               }}
-              className="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-2.5 rounded-full text-xs uppercase"
+              className="pill-btn-emerald py-2.5 px-6 text-xs"
             >
-              DONE
+              Close Window
             </button>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="flex items-center gap-3 pb-3 border-b border-slate-800">
-              <div className="w-10 h-10 rounded-xl bg-blue-600/20 border border-blue-500/30 flex items-center justify-center text-blue-400">
-                <Calendar className="w-5 h-5" />
-              </div>
-              <div>
-                <h3 className="text-xl font-heading font-bold text-white">BOOK A CONSULTATION</h3>
-                <p className="text-xs text-slate-400">Peter's Window Cleaning Services • Hot Wash System</p>
-              </div>
-            </div>
-
             <div>
-              <label className="block text-xs font-bold text-slate-300 uppercase mb-1">YOUR FULL NAME *</label>
-              <input 
-                type="text" 
-                required 
-                placeholder="e.g. John Murphy"
-                className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500"
+              <label className="block text-xs font-semibold text-slate-300 mb-1">Your Full Name *</label>
+              <input
+                type="text"
+                required
+                placeholder="John Murphy"
+                value={formData.name}
+                onChange={(e) => setFormData({...formData, name: e.target.value})}
+                className="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs focus:outline-none focus:border-emerald-500 transition-colors"
               />
             </div>
 
             <div>
-              <label className="block text-xs font-bold text-slate-300 uppercase mb-1">PHONE / WHATSAPP NUMBER *</label>
-              <input 
-                type="tel" 
-                required 
-                placeholder="e.g. 086 785 8590"
-                className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500"
+              <label className="block text-xs font-semibold text-slate-300 mb-1">Phone Number *</label>
+              <input
+                type="tel"
+                required
+                placeholder="087 123 4567"
+                value={formData.phone}
+                onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                className="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs focus:outline-none focus:border-emerald-500 transition-colors"
               />
             </div>
 
             <div>
-              <label className="block text-xs font-bold text-slate-300 uppercase mb-1">SERVICE PREFERENCE</label>
-              <select className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500">
-                <option>6 Weeks Window Rotation</option>
-                <option>8 Weeks Window Rotation</option>
-                <option>12 Weeks Window Rotation</option>
-                <option>Gutter Cleaning (10% Off Code MLN9)</option>
-                <option>Solar Panel / High Glass Cleaning</option>
-                <option>Driveway / Patio Pressure Wash</option>
+              <label className="block text-xs font-semibold text-slate-300 mb-1">Roofing Service Needed *</label>
+              <select
+                value={formData.service}
+                onChange={(e) => setFormData({...formData, service: e.target.value})}
+                className="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs focus:outline-none focus:border-emerald-500 transition-colors"
+              >
+                <option>Roof Repairs & Replacement</option>
+                <option>Flat Roofing Specialists</option>
+                <option>Dry Verge & Ridge Systems</option>
+                <option>Chimney & Valley Repairs</option>
+                <option>Roof Cleaning & Treatment</option>
+                <option>Fascia, Soffit & Guttering</option>
+                <option>24/7 Emergency Repairs</option>
               </select>
+            </div>
+
+            <div>
+              <label className="block text-xs font-semibold text-slate-300 mb-1">Location / County in Ireland *</label>
+              <input
+                type="text"
+                required
+                placeholder="e.g. Dublin, Cork, Galway"
+                value={formData.location}
+                onChange={(e) => setFormData({...formData, location: e.target.value})}
+                className="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs focus:outline-none focus:border-emerald-500 transition-colors"
+              />
+            </div>
+
+            <div>
+              <label className="block text-xs font-semibold text-slate-300 mb-1">Additional Details (Optional)</label>
+              <textarea
+                rows="3"
+                placeholder="Brief description of the issue or project..."
+                value={formData.notes}
+                onChange={(e) => setFormData({...formData, notes: e.target.value})}
+                className="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs focus:outline-none focus:border-emerald-500 transition-colors resize-none"
+              ></textarea>
             </div>
 
             <button
               type="submit"
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-extrabold py-3.5 rounded-full shadow-lg transition-all text-sm uppercase tracking-wider"
+              className="w-full pill-btn-emerald py-3.5 text-xs font-bold font-heading mt-2"
             >
-              CONFIRM CONSULTATION REQUEST
+              Submit Free Quote Request
             </button>
-
-            <div className="flex items-center justify-center gap-2 text-xs text-slate-400 pt-1">
-              <Phone className="w-3.5 h-3.5 text-blue-400" />
-              <span>Or Call / Text Peter or Suzanne: <a href="tel:0867858590" className="text-blue-400 font-bold hover:underline">086 785 8590</a></span>
-            </div>
           </form>
         )}
 

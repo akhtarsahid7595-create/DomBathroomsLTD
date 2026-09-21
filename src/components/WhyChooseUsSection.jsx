@@ -1,95 +1,99 @@
 import React from 'react';
-import { Star, ShieldCheck, Clock, ThumbsUp, Sparkles, MessageCircle, PiggyBank, Heart } from 'lucide-react';
 
-export default function WhyChooseUsSection({ onOpenBooking }) {
+export default function WhyChooseUsSection({ onOpenQuote }) {
   const points = [
     {
-      icon: ShieldCheck,
-      title: "Full Bathroom Refurbishments",
-      desc: "From initial strip-out to final polish, we manage every single step so you don't have to stress about organizing builders or plumbers."
+      title: "Quality You Can See",
+      desc: "Premium grade roofing materials, heavy-gauge lead work, and high-density slate tiles installed by master trade specialists.",
+      highlight: "Premium Materials & Installation"
     },
     {
-      icon: ThumbsUp,
-      title: "Professional & Tidy Workmanship",
-      desc: "We treat your home with total respect. Daily cleanup, heavy-duty floor protective film, and dust extractors keep your house spotless."
+      title: "Protection You Can Trust",
+      desc: "Engineered specifically to withstand heavy Irish rainfall, high winds, standing water, and winter frost cycles.",
+      highlight: "Built for Irish Weather"
     },
     {
-      icon: Clock,
-      title: "Fast Turnaround",
-      desc: "Our experienced crew works efficiently without sacrificing attention to detail, ensuring your new bathroom is ready on schedule."
+      title: "Service You Can Count On",
+      desc: "Punctual, polite, and fully transparent. We treat your property with complete care and leave site spotless every day.",
+      highlight: "Reliable, Local & Always Here"
     },
     {
-      icon: Sparkles,
-      title: "Quality Finish",
-      desc: "Laser-aligned tiles, perfectly mitred trim edges, high-grade waterproof grout, and premium fixture installation that stands the test of time."
+      title: "100% Guaranteed Workmanship",
+      desc: "Every repair, dry verge installation, and re-roof comes with an official written guarantee for complete peace of mind.",
+      highlight: "Written Guarantee Provided"
     },
     {
-      icon: MessageCircle,
-      title: "Clear & Honest Communication",
-      desc: "No radio silence. We keep you informed with daily photo updates, transparent timelines, and honest advice at every step."
+      title: "24/7 Emergency Call Out",
+      desc: "Storm leak or fallen ridge tile? Our emergency rapid-response unit is available 24 hours a day across Ireland.",
+      highlight: "Rapid Dispatch"
     },
     {
-      icon: PiggyBank,
-      title: "Competitive Prices",
-      desc: "Fair, transparent fixed-price quotations with zero hidden surprises. High quality craftsmanship doesn't have to break the bank."
+      title: "Proudly Irish & Locally Owned ☘️",
+      desc: "Direct local contact with no outsourced middle-men or pushy sales reps. Honest advice from local tradesmen.",
+      highlight: "100% Local Enterprise"
     }
   ];
 
   return (
-    <section id="why-us" className="py-24 bg-slate-950 relative overflow-hidden">
+    <section id="why-us" className="py-20 bg-[#0B0F17] relative border-b border-slate-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 font-bold text-xs uppercase tracking-wider">
-            <Heart className="w-3.5 h-3.5 text-emerald-400 fill-emerald-400" />
-            <span>Our Commitment To You</span>
+        <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider">
+            <span>WHY CHOOSE EVERCREST</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white tracking-tight">
-            Quality Work. Great Results. Happy Customers.
+
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-white font-heading tracking-tight">
+            Quality Workmanship. Honest Advice. <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">
+              Lasting Protection.
+            </span>
           </h2>
-          <p className="text-slate-400 text-base sm:text-lg">
-            Here is why homeowners across London & surrounding areas trust DomBathroomsLTD with their most valuable spaces.
+          
+          <p className="text-slate-400 text-base font-light">
+            Here is why homeowners and property managers across Ireland trust Evercrest Roofing.
           </p>
         </div>
 
-        {/* 6 Core Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {points.map((p, i) => {
-            const Icon = p.icon;
-            return (
-              <div 
-                key={i}
-                className="bg-slate-900/60 p-8 rounded-3xl border border-slate-800 hover:border-emerald-500/40 transition-all duration-300 group hover:-translate-y-1"
-              >
-                <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-6 group-hover:bg-emerald-500 group-hover:text-slate-950 transition-colors">
-                  <Icon className="w-6 h-6" />
+        {/* Pattern 3: 2-Column Checkmark Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {points.map((pt, idx) => (
+            <div 
+              key={idx}
+              className="obsidian-card p-6 flex flex-col justify-between group relative overflow-hidden"
+            >
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center font-extrabold text-base shrink-0 group-hover:bg-emerald-500 group-hover:text-black transition-colors shadow-lg shadow-emerald-500/10">
+                    ✓
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-white font-heading group-hover:text-emerald-300 transition-colors">
+                      {pt.title}
+                    </h3>
+                    <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider block">
+                      {pt.highlight}
+                    </span>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-emerald-300 transition-colors">
-                  {p.title}
-                </h3>
-                <p className="text-sm text-slate-400 leading-relaxed">
-                  {p.desc}
+
+                <p className="text-slate-400 text-xs leading-relaxed font-light pt-2">
+                  {pt.desc}
                 </p>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
 
-        {/* Trust Banner */}
-        <div className="mt-16 bg-gradient-to-r from-purple-950 via-slate-900 to-indigo-950 p-8 sm:p-10 rounded-3xl border border-purple-800/40 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
-          <div className="space-y-2 text-center md:text-left">
-            <h3 className="text-2xl font-heading font-bold text-white">Thinking about transforming your bathroom?</h3>
-            <p className="text-sm text-slate-300">
-              Message DomBathroomsLTD today for a FREE quote and let's turn your old bathroom into something you'll love!
-            </p>
+        {/* CTA Bar */}
+        <div className="mt-12 p-8 rounded-2xl bg-gradient-to-r from-[#131924] via-emerald-950/40 to-[#131924] border border-emerald-500/30 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <h3 className="text-xl font-bold text-white font-heading">Need an Honest Roof Assessment?</h3>
+            <p className="text-xs text-slate-400">Our local team provides free site visits & no-obligation quotes across Ireland.</p>
           </div>
-
-          <button
-            onClick={onOpenBooking}
-            className="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-8 py-4 rounded-full shadow-lg shadow-emerald-500/20 text-sm shrink-0 transition-transform active:scale-95"
-          >
-            Message Us for Free Quote
+          <button onClick={onOpenQuote} className="pill-btn-emerald shrink-0 py-3.5 px-8 text-sm">
+            Schedule Free Inspection
           </button>
         </div>
 

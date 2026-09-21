@@ -1,94 +1,89 @@
 import React from 'react';
-import { Bath, Phone, Mail, MapPin, Instagram, ShieldCheck, Heart } from 'lucide-react';
 
-export default function Footer({ onOpenBooking }) {
+export default function Footer({ onOpenQuote }) {
   return (
-    <footer className="bg-slate-950 text-slate-400 border-t border-slate-800 pt-16 pb-12">
+    <footer className="bg-[#080B11] border-t border-slate-800 text-slate-400 py-16 text-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           
-          {/* Brand Info (2 cols) */}
-          <div className="lg:col-span-2 space-y-4">
+          {/* Brand Info */}
+          <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-amber-500 flex items-center justify-center shadow-lg text-slate-950">
-                <Bath className="w-6 h-6 stroke-[2.2]" />
+              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center font-bold text-white shadow-lg shadow-emerald-500/20">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.2" d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V10" />
+                </svg>
               </div>
-              <span className="font-heading font-extrabold text-2xl tracking-tight text-white">
-                DOM BATHROOMS <span className="text-amber-400">LTD</span>
+              <span className="text-xl font-extrabold text-white font-heading tracking-tight">
+                EVERCREST <span className="text-emerald-400">ROOFING</span>
               </span>
             </div>
 
-            <p className="text-sm leading-relaxed max-w-sm text-slate-400">
-              From stripping out old bathrooms to complete luxury refurbishments — we deliver quality work, great results, and happy customers every single time.
+            <p className="text-xs text-slate-400 leading-relaxed font-light">
+              STRONG ROOFS. SAFE HOMES. Built for Ireland.<br />
+              Expert local roofing contractors providing guaranteed slate repairs, flat roofing, dry verge systems, and 24/7 emergency response.
             </p>
 
-            <div className="pt-2 flex items-center gap-4 text-xs font-semibold">
-              <span className="flex items-center gap-1.5 text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/30">
-                <ShieldCheck className="w-4 h-4" /> Fully Insured & Guaranteed
-              </span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold">
+              <span>☘️ Proudly Irish & Locally Owned</span>
             </div>
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h4 className="text-sm font-extrabold text-white uppercase tracking-wider mb-4">Navigation</h4>
-            <ul className="space-y-2.5 text-sm">
-              <li><a href="#" className="hover:text-amber-400 transition-colors">Home</a></li>
-              <li><a href="#services" className="hover:text-amber-400 transition-colors">Services</a></li>
-              <li><a href="#before-after" className="hover:text-amber-400 transition-colors">Before & After</a></li>
-              <li><a href="#why-us" className="hover:text-amber-400 transition-colors">Why Choose Us</a></li>
-              <li><a href="#calculator" className="hover:text-amber-400 transition-colors">Cost Estimator</a></li>
-              <li><a href="#reviews" className="hover:text-amber-400 transition-colors">Reviews</a></li>
+          <div className="space-y-3">
+            <h4 className="text-sm font-bold text-white font-heading uppercase tracking-wider">Quick Navigation</h4>
+            <ul className="space-y-2 text-xs">
+              <li><a href="#services" className="hover:text-emerald-400 transition-colors">Roofing Services</a></li>
+              <li><a href="#about" className="hover:text-emerald-400 transition-colors">Who We Are</a></li>
+              <li><a href="#why-us" className="hover:text-emerald-400 transition-colors">Why Choose Us</a></li>
+              <li><a href="#pricing" className="hover:text-emerald-400 transition-colors">Service Packages</a></li>
+              <li><a href="#gallery" className="hover:text-emerald-400 transition-colors">Project Gallery</a></li>
+              <li><a href="#contact" className="hover:text-emerald-400 transition-colors">Request Quote</a></li>
             </ul>
           </div>
 
-          {/* Services */}
-          <div>
-            <h4 className="text-sm font-extrabold text-white uppercase tracking-wider mb-4">Services</h4>
-            <ul className="space-y-2.5 text-sm">
-              <li><a href="#services" className="hover:text-amber-400 transition-colors">Full Refurbishments</a></li>
-              <li><a href="#services" className="hover:text-amber-400 transition-colors">Bathroom Strip-Outs</a></li>
-              <li><a href="#services" className="hover:text-amber-400 transition-colors">Precision Tiling</a></li>
-              <li><a href="#services" className="hover:text-amber-400 transition-colors">Walk-In Wetrooms</a></li>
-              <li><a href="#services" className="hover:text-amber-400 transition-colors">Underfloor Heating</a></li>
-              <li><a href="#services" className="hover:text-amber-400 transition-colors">Concealed Plumbing</a></li>
+          {/* Services List */}
+          <div className="space-y-3">
+            <h4 className="text-sm font-bold text-white font-heading uppercase tracking-wider">Our Services</h4>
+            <ul className="space-y-2 text-xs">
+              <li>Roof Repairs & Replacement</li>
+              <li>Flat Roofing Specialists</li>
+              <li>Dry Verge & Ridge Systems</li>
+              <li>Chimney & Valley Repairs</li>
+              <li>Roof Cleaning & Treatment</li>
+              <li>UPVC Fascia, Soffit & Gutters</li>
+              <li>24/7 Emergency Repairs</li>
             </ul>
           </div>
 
-          {/* Contact & Social */}
-          <div>
-            <h4 className="text-sm font-extrabold text-white uppercase tracking-wider mb-4">Contact Us</h4>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-amber-400" />
-                <a href="tel:07700900123" className="text-white hover:text-amber-400 font-bold">07700 900123</a>
-              </li>
-              <li className="flex items-center gap-2">
-                <Instagram className="w-4 h-4 text-pink-400" />
-                <span className="text-white font-semibold">@dombathroomsltd</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-amber-400 mt-1 shrink-0" />
-                <span>Serving London, Essex & Surrounding Home Counties</span>
-              </li>
-            </ul>
+          {/* Contact & Hours */}
+          <div className="space-y-4">
+            <h4 className="text-sm font-bold text-white font-heading uppercase tracking-wider">Contact & Support</h4>
+            
+            <div className="space-y-2 text-xs">
+              <p className="text-slate-300 font-semibold">📍 Serving Homes Across Ireland</p>
+              <p className="text-slate-400">Dispatch Units Available Nationwide</p>
+              <p className="text-emerald-400 font-bold">⚡ 24/7 Emergency Response Available</p>
+            </div>
 
             <button
-              onClick={onOpenBooking}
-              className="mt-4 w-full bg-slate-900 hover:bg-amber-500 text-amber-400 hover:text-slate-950 font-bold py-2.5 rounded-xl border border-slate-800 transition-all text-xs"
+              onClick={onOpenQuote}
+              className="w-full pill-btn-emerald py-3 text-xs text-center font-bold"
             >
-              Request Free Quote
+              Get Free Inspection Quote
             </button>
           </div>
 
         </div>
 
-        {/* Bottom copyright */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
-          <p>© {new Date().getFullYear()} DomBathroomsLTD. All rights reserved.</p>
-          <div className="flex items-center gap-1 text-slate-400">
-            <span>Quality work. Great results. Happy customers.</span>
+        {/* Bottom Copyright */}
+        <div className="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+          <p>© {new Date().getFullYear()} Evercrest Roofing Ireland. All rights reserved.</p>
+          <div className="flex items-center gap-4">
+            <span>100% Guaranteed Workmanship</span>
+            <span>•</span>
+            <span>Fully Insured</span>
           </div>
         </div>
 
