@@ -5,32 +5,32 @@ export default function ServicesSection({ onOpenQuote }) {
     {
       title: "Roofing & Full Replacement",
       desc: "Ireland's trusted certified roofing contractor for complete roof replacements and new installations built to last decades.",
-      img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1000&q=80"
     },
     {
       title: "Roof Repair & Storm Damage",
       desc: "Roof leak, storm damage, and emergency repair. Fast response and expert tile replacement across Ireland.",
-      img: "https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?q=80&w=1000&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?auto=format&fit=crop&w=1000&q=80"
     },
     {
       title: "Rubber Roofing (EPDM)",
       desc: "EPDM rubber roofing systems for flat and low-slope roofs: full installation, replacement, and flat roof repair.",
-      img: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1000&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1000&q=80"
     },
     {
       title: "Natural Slate & Chimney Repair",
       desc: "Traditional Irish natural slate work, chimney repointing, lead step flashing, and valley water restoration.",
-      img: "https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?q=80&w=1000&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80"
     },
     {
       title: "Dry Verge & Ridge Systems",
       desc: "Maintenance-free UPVC dry verge capping and dry ridge systems. Protect gable ends without crumbling mortar.",
-      img: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1000&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=1000&q=80"
     },
     {
       title: "Fascia, Soffit & Guttering",
       desc: "Seamless UPVC gutter installation, downspouts, soffit ventilation, and timber fascia board replacement.",
-      img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1000&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=1000&q=80"
     }
   ];
 
@@ -52,7 +52,7 @@ export default function ServicesSection({ onOpenQuote }) {
           </p>
         </div>
 
-        {/* IrelandContracting Style 3-Column Card Grid (Image 3 Spec) */}
+        {/* IrelandContracting Style 3-Column Card Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((srv, idx) => (
             <div 
@@ -66,6 +66,7 @@ export default function ServicesSection({ onOpenQuote }) {
                     src={srv.img}
                     alt={srv.title}
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 </div>
 
