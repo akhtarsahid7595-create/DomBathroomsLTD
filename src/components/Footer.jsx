@@ -2,88 +2,104 @@ import React from 'react';
 
 export default function Footer({ onOpenQuote }) {
   return (
-    <footer className="bg-[#080B11] border-t border-slate-800 text-slate-400 py-16 text-sm">
+    <footer className="bg-[#0A2916] text-white py-16 border-t border-emerald-900/60 text-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
           
           {/* Brand Info */}
-          <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center font-bold text-white shadow-lg shadow-emerald-500/20">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.2" d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V10" />
-                </svg>
+          <div className="lg:col-span-2 space-y-4">
+            <div className="bg-white p-4 rounded-xl inline-block shadow-md">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-emerald-900 flex items-center justify-center text-white text-2xl">
+                  ☘️
+                </div>
+                <div>
+                  <span className="text-xl font-black text-slate-900 font-heading block leading-none">EVERCREST</span>
+                  <span className="text-[10px] font-bold text-emerald-800 tracking-wider block font-heading">CONTRACTING</span>
+                  <span className="text-[9px] font-extrabold text-slate-600 block">1-800-NEW-ROOF</span>
+                </div>
               </div>
-              <span className="text-xl font-extrabold text-white font-heading tracking-tight">
-                EVERCREST <span className="text-emerald-400">ROOFING</span>
-              </span>
             </div>
 
-            <p className="text-xs text-slate-400 leading-relaxed font-light">
-              STRONG ROOFS. SAFE HOMES. Built for Ireland.<br />
-              Expert local roofing contractors providing guaranteed slate repairs, flat roofing, dry verge systems, and 24/7 emergency response.
+            <p className="text-emerald-100/90 text-xs leading-relaxed max-w-sm font-normal">
+              Family-owned exterior contractor serving homes and commercial properties across Ireland since 1998. Fully licensed, bonded, and insured.
             </p>
 
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold">
-              <span>☘️ Proudly Irish & Locally Owned</span>
+            <div className="space-y-2 text-xs text-emerald-200">
+              <p className="flex items-center gap-2">
+                <span>📞</span> <a href="tel:0871234567" className="hover:underline font-bold text-white">(087) 123 4567</a>
+              </p>
+              <p className="flex items-center gap-2">
+                <span>✉️</span> <span>info@evercrestcontracting.ie</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <span>📍</span> <span>Serving Homes & Businesses Across Ireland 🇮🇪</span>
+              </p>
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Services Column */}
           <div className="space-y-3">
-            <h4 className="text-sm font-bold text-white font-heading uppercase tracking-wider">Quick Navigation</h4>
-            <ul className="space-y-2 text-xs">
-              <li><a href="#services" className="hover:text-emerald-400 transition-colors">Roofing Services</a></li>
-              <li><a href="#about" className="hover:text-emerald-400 transition-colors">Who We Are</a></li>
-              <li><a href="#why-us" className="hover:text-emerald-400 transition-colors">Why Choose Us</a></li>
-              <li><a href="#pricing" className="hover:text-emerald-400 transition-colors">Service Packages</a></li>
-              <li><a href="#gallery" className="hover:text-emerald-400 transition-colors">Project Gallery</a></li>
-              <li><a href="#contact" className="hover:text-emerald-400 transition-colors">Request Quote</a></li>
+            <h4 className="text-sm font-bold text-white font-heading uppercase tracking-wider">Services</h4>
+            <ul className="space-y-2 text-xs text-emerald-200/90">
+              <li><a href="#services" className="hover:text-white transition-colors">Roofing</a></li>
+              <li><a href="#services" className="hover:text-white transition-colors">Roof Repair</a></li>
+              <li><a href="#services" className="hover:text-white transition-colors">Rubber Roofing</a></li>
+              <li><a href="#services" className="hover:text-white transition-colors">Slate Repair</a></li>
+              <li><a href="#services" className="hover:text-white transition-colors">Dry Verge Systems</a></li>
+              <li><a href="#services" className="hover:text-white transition-colors">Gutters</a></li>
+              <li><a href="#services" className="hover:text-white transition-colors">Soffits & Fascia</a></li>
+              <li><a href="#services" className="hover:text-white transition-colors">Chimney Repair</a></li>
             </ul>
           </div>
 
-          {/* Services List */}
+          {/* Areas We Serve Column */}
           <div className="space-y-3">
-            <h4 className="text-sm font-bold text-white font-heading uppercase tracking-wider">Our Services</h4>
-            <ul className="space-y-2 text-xs">
-              <li>Roof Repairs & Replacement</li>
-              <li>Flat Roofing Specialists</li>
-              <li>Dry Verge & Ridge Systems</li>
-              <li>Chimney & Valley Repairs</li>
-              <li>Roof Cleaning & Treatment</li>
-              <li>UPVC Fascia, Soffit & Gutters</li>
-              <li>24/7 Emergency Repairs</li>
+            <h4 className="text-sm font-bold text-white font-heading uppercase tracking-wider">Areas We Serve</h4>
+            <ul className="space-y-2 text-xs text-emerald-200/90">
+              <li>County Dublin</li>
+              <li>County Cork</li>
+              <li>County Galway</li>
+              <li>County Kildare</li>
+              <li>County Wicklow</li>
+              <li>County Limerick</li>
+              <li>County Meath</li>
+              <li className="text-emerald-400 font-semibold cursor-pointer" onClick={onOpenQuote}>View all areas →</li>
             </ul>
           </div>
 
-          {/* Contact & Hours */}
-          <div className="space-y-4">
-            <h4 className="text-sm font-bold text-white font-heading uppercase tracking-wider">Contact & Support</h4>
-            
-            <div className="space-y-2 text-xs">
-              <p className="text-slate-300 font-semibold">📍 Serving Homes Across Ireland</p>
-              <p className="text-slate-400">Dispatch Units Available Nationwide</p>
-              <p className="text-emerald-400 font-bold">⚡ 24/7 Emergency Response Available</p>
+          {/* Hours & License */}
+          <div className="space-y-3">
+            <h4 className="text-sm font-bold text-white font-heading uppercase tracking-wider">Hours & Credentials</h4>
+            <div className="text-xs text-emerald-200/90 space-y-1">
+              <p className="font-semibold text-white">Monday – Friday:</p>
+              <p>8:00 AM – 5:00 PM</p>
+              <p className="font-semibold text-white pt-1">Saturday – Sunday:</p>
+              <p>Closed (Emergency Line Active)</p>
             </div>
 
-            <button
-              onClick={onOpenQuote}
-              className="w-full pill-btn-emerald py-3 text-xs text-center font-bold"
-            >
-              Get Free Inspection Quote
-            </button>
+            <div className="pt-2 text-xs text-emerald-300 space-y-1">
+              <p>Licensed, Bonded & Insured</p>
+              <p>License IRL #026195</p>
+            </div>
+
+            <div className="pt-2">
+              <span className="inline-flex items-center gap-1.5 text-xs text-amber-400 font-bold">
+                ★ Review us on Google
+              </span>
+            </div>
           </div>
 
         </div>
 
-        {/* Bottom Copyright */}
-        <div className="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <p>© {new Date().getFullYear()} Evercrest Roofing Ireland. All rights reserved.</p>
-          <div className="flex items-center gap-4">
-            <span>100% Guaranteed Workmanship</span>
-            <span>•</span>
-            <span>Fully Insured</span>
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-emerald-900/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-emerald-300">
+          <p>© {new Date().getFullYear()} Evercrest Contracting LLC. All rights reserved.</p>
+          <div className="flex gap-4">
+            <a href="#" className="hover:underline">Privacy Policy</a>
+            <a href="#" className="hover:underline">Terms of Service</a>
+            <a href="#" className="hover:underline">Cookie Settings</a>
           </div>
         </div>
 

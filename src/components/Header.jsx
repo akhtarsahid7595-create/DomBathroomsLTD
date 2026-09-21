@@ -4,54 +4,77 @@ export default function Header({ onOpenQuote }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="site-header">
+    <header className="sticky top-0 w-full bg-white border-b border-slate-200 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-24">
           
-          {/* Text Logo with Roof Icon */}
+          {/* IrelandContracting Style Logo: Shamrock Emblem + Bold Text */}
           <a href="#" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-transform">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.2" d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V10" />
-              </svg>
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-800 to-emerald-950 flex items-center justify-center shadow-md text-white font-extrabold text-2xl group-hover:scale-105 transition-transform">
+              ☘️
             </div>
             <div>
-              <span className="text-xl sm:text-2xl font-extrabold tracking-tight text-white font-heading block leading-none">
-                EVERCREST <span className="text-emerald-400">ROOFING</span>
+              <div className="flex items-center gap-1">
+                <span className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight font-heading leading-none">
+                  EVERCREST
+                </span>
+              </div>
+              <span className="text-[11px] font-bold text-emerald-800 tracking-widest block uppercase font-heading">
+                CONTRACTING
               </span>
-              <span className="text-[10px] uppercase tracking-widest text-slate-400 font-semibold block mt-0.5">
-                LOCAL • RELIABLE • PROFESSIONAL
+              <span className="text-[10px] font-extrabold text-slate-700 block tracking-tighter">
+                1-800-NEW-ROOF
               </span>
             </div>
           </a>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-300">
-            <a href="#services" className="hover:text-emerald-400 transition-colors">Roofing Services</a>
-            <a href="#about" className="hover:text-emerald-400 transition-colors">Who We Are</a>
-            <a href="#why-us" className="hover:text-emerald-400 transition-colors">Why Choose Us</a>
-            <a href="#pricing" className="hover:text-emerald-400 transition-colors">Packages</a>
-            <a href="#gallery" className="hover:text-emerald-400 transition-colors">Work Gallery</a>
-            <a href="#contact" className="hover:text-emerald-400 transition-colors">Contact</a>
+          {/* Desktop Navigation Links matching IrelandContracting */}
+          <nav className="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700">
+            <div className="relative group cursor-pointer flex items-center gap-1 hover:text-emerald-800">
+              <a href="#services">Services</a>
+              <svg className="w-4 h-4 text-slate-400 group-hover:text-emerald-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+            <div className="relative group cursor-pointer flex items-center gap-1 hover:text-emerald-800">
+              <a href="#areas">Areas We Serve</a>
+              <svg className="w-4 h-4 text-slate-400 group-hover:text-emerald-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+            <a href="#about" className="hover:text-emerald-800 transition-colors">About</a>
+            <a href="#portfolio" className="hover:text-emerald-800 transition-colors">Portfolio</a>
+            <a href="#reviews" className="hover:text-emerald-800 transition-colors">Reviews</a>
+            <a href="#contact" className="hover:text-emerald-800 transition-colors">Contact</a>
           </nav>
 
-          {/* CTA & Mobile Toggle */}
-          <div className="flex items-center gap-4">
+          {/* Action CTAs: Phone Button + Green Free Estimate Button */}
+          <div className="flex items-center gap-3">
+            <a
+              href="tel:0871234567"
+              className="ic-btn-phone text-xs sm:text-sm py-2.5 px-4 sm:px-5 hidden sm:inline-flex"
+            >
+              <svg className="w-4 h-4 text-emerald-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h32a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" />
+              </svg>
+              <span>(087) 123 4567</span>
+            </a>
+
             <button
               onClick={onOpenQuote}
-              className="pill-btn-emerald text-sm py-2.5 px-6 hidden sm:inline-flex"
+              className="ic-btn-primary text-xs sm:text-sm py-2.5 px-5 sm:px-6"
             >
-              Get Free Quote
+              <span>Get a Free Estimate</span>
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </button>
 
-            {/* Animated Hamburger Button */}
+            {/* Mobile Toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-lg bg-slate-800/80 text-slate-200 hover:text-emerald-400 border border-slate-700/60 transition-colors"
-              aria-label="Toggle Navigation Menu"
+              className="lg:hidden p-2 rounded-lg bg-slate-100 text-slate-700 hover:text-emerald-800 transition-colors"
+              aria-label="Toggle Menu"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {mobileMenuOpen ? (
@@ -62,66 +85,34 @@ export default function Header({ onOpenQuote }) {
               </svg>
             </button>
           </div>
+
         </div>
       </div>
 
-      {/* Dedicated Mobile Navigation Drawer */}
+      {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#0B0F17]/98 backdrop-blur-xl border-b border-slate-800 px-6 py-6 space-y-4 animate-fadeIn">
-          <nav className="flex flex-col space-y-4 text-base font-semibold text-slate-200">
-            <a 
-              href="#services" 
-              onClick={() => setMobileMenuOpen(false)}
-              className="py-2 border-b border-slate-800/60 hover:text-emerald-400 transition-colors"
-            >
-              Roofing Services
-            </a>
-            <a 
-              href="#about" 
-              onClick={() => setMobileMenuOpen(false)}
-              className="py-2 border-b border-slate-800/60 hover:text-emerald-400 transition-colors"
-            >
-              Who We Are
-            </a>
-            <a 
-              href="#why-us" 
-              onClick={() => setMobileMenuOpen(false)}
-              className="py-2 border-b border-slate-800/60 hover:text-emerald-400 transition-colors"
-            >
-              Why Choose Us
-            </a>
-            <a 
-              href="#pricing" 
-              onClick={() => setMobileMenuOpen(false)}
-              className="py-2 border-b border-slate-800/60 hover:text-emerald-400 transition-colors"
-            >
-              Service Packages
-            </a>
-            <a 
-              href="#gallery" 
-              onClick={() => setMobileMenuOpen(false)}
-              className="py-2 border-b border-slate-800/60 hover:text-emerald-400 transition-colors"
-            >
-              Project Gallery
-            </a>
-            <a 
-              href="#contact" 
-              onClick={() => setMobileMenuOpen(false)}
-              className="py-2 border-b border-slate-800/60 hover:text-emerald-400 transition-colors"
-            >
-              Contact Us
-            </a>
+        <div className="lg:hidden bg-white border-b border-slate-200 px-6 py-6 space-y-4">
+          <nav className="flex flex-col space-y-3 font-semibold text-slate-700 text-sm">
+            <a href="#services" onClick={() => setMobileMenuOpen(false)} className="py-2 border-b border-slate-100">Services</a>
+            <a href="#areas" onClick={() => setMobileMenuOpen(false)} className="py-2 border-b border-slate-100">Areas We Serve</a>
+            <a href="#about" onClick={() => setMobileMenuOpen(false)} className="py-2 border-b border-slate-100">About</a>
+            <a href="#portfolio" onClick={() => setMobileMenuOpen(false)} className="py-2 border-b border-slate-100">Portfolio</a>
+            <a href="#reviews" onClick={() => setMobileMenuOpen(false)} className="py-2 border-b border-slate-100">Reviews</a>
+            <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="py-2 border-b border-slate-100">Contact</a>
           </nav>
-
-          <div className="pt-2">
+          
+          <div className="pt-2 flex flex-col gap-3">
+            <a href="tel:0871234567" className="ic-btn-phone w-full text-center text-sm py-3">
+              📞 (087) 123 4567
+            </a>
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
                 onOpenQuote();
               }}
-              className="w-full pill-btn-emerald py-3 text-center"
+              className="ic-btn-primary w-full text-center text-sm py-3"
             >
-              Get Free Quote
+              Get a Free Estimate →
             </button>
           </div>
         </div>
