@@ -1,4 +1,5 @@
 import React from 'react';
+import EvercrestLogo from './EvercrestLogo';
 
 export default function Footer({ onOpenQuote }) {
   return (
@@ -9,17 +10,8 @@ export default function Footer({ onOpenQuote }) {
           
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-4">
-            <div className="bg-white p-4 rounded-xl inline-block shadow-md">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-emerald-900 flex items-center justify-center text-white text-2xl">
-                  ☘️
-                </div>
-                <div>
-                  <span className="text-xl font-black text-slate-900 font-heading block leading-none">EVERCREST</span>
-                  <span className="text-[10px] font-bold text-emerald-800 tracking-wider block font-heading">CONTRACTING</span>
-                  <span className="text-[9px] font-extrabold text-slate-600 block">1-800-NEW-ROOF</span>
-                </div>
-              </div>
+            <div className="bg-[#0F381E] p-4 rounded-xl border border-emerald-800/80 inline-block shadow-md">
+              <EvercrestLogo variant="dark" />
             </div>
 
             <p className="text-emerald-100/90 text-xs leading-relaxed max-w-sm font-normal">
@@ -31,7 +23,7 @@ export default function Footer({ onOpenQuote }) {
                 <span>📞</span> <a href="tel:0871234567" className="hover:underline font-bold text-white">(087) 123 4567</a>
               </p>
               <p className="flex items-center gap-2">
-                <span>✉️</span> <span>info@evercrestcontracting.ie</span>
+                <span>✉️</span> <span>info@evercrestroofing.ie</span>
               </p>
               <p className="flex items-center gap-2">
                 <span>📍</span> <span>Serving Homes & Businesses Across Ireland 🇮🇪</span>
@@ -95,7 +87,7 @@ export default function Footer({ onOpenQuote }) {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-emerald-900/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-emerald-300">
-          <p>© {new Date().getFullYear()} Evercrest Contracting LLC. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Evercrest Roofing LLC. All rights reserved.</p>
           <div className="flex gap-4">
             <a href="#" className="hover:underline">Privacy Policy</a>
             <a href="#" className="hover:underline">Terms of Service</a>

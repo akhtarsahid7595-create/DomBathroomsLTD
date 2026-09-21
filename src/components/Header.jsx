@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import EvercrestLogo from './EvercrestLogo';
 
 export default function Header({ onOpenQuote }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -8,27 +9,12 @@ export default function Header({ onOpenQuote }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-24">
           
-          {/* IrelandContracting Style Logo: Shamrock Emblem + Bold Text */}
-          <a href="#" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-800 to-emerald-950 flex items-center justify-center shadow-md text-white font-extrabold text-2xl group-hover:scale-105 transition-transform">
-              ☘️
-            </div>
-            <div>
-              <div className="flex items-center gap-1">
-                <span className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight font-heading leading-none">
-                  EVERCREST
-                </span>
-              </div>
-              <span className="text-[11px] font-bold text-emerald-800 tracking-widest block uppercase font-heading">
-                CONTRACTING
-              </span>
-              <span className="text-[10px] font-extrabold text-slate-700 block tracking-tighter">
-                1-800-NEW-ROOF
-              </span>
-            </div>
+          {/* Recreated Logo from Flyer */}
+          <a href="#" className="flex items-center group">
+            <EvercrestLogo variant="light" />
           </a>
 
-          {/* Desktop Navigation Links matching IrelandContracting */}
+          {/* Desktop Navigation Links */}
           <nav className="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700">
             <div className="relative group cursor-pointer flex items-center gap-1 hover:text-emerald-800">
               <a href="#services">Services</a>
@@ -48,7 +34,7 @@ export default function Header({ onOpenQuote }) {
             <a href="#contact" className="hover:text-emerald-800 transition-colors">Contact</a>
           </nav>
 
-          {/* Action CTAs: Phone Button + Green Free Estimate Button */}
+          {/* Action CTAs */}
           <div className="flex items-center gap-3">
             <a
               href="tel:0871234567"
