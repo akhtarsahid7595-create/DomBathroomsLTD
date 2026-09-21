@@ -3,11 +3,11 @@ import React from 'react';
 export default function Hero({ onOpenQuote }) {
   return (
     <section className="relative min-h-[85vh] flex items-center bg-slate-900 overflow-hidden py-16 lg:py-24">
-      {/* Background Image: Bright daytime luxury residential home matching IrelandContracting.com */}
+      {/* Background Image: AI-generated authentic luxury traditional Irish house with natural slate roof */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1600&q=80"
-          alt="Evercrest Contracting Residential Roof"
+          src="/images/hero_roof_banner.jpg"
+          alt="Evercrest Contracting Irish Residential Roof"
           className="w-full h-full object-cover object-center"
         />
         {/* Soft subtle left gradient overlay for crisp white typography readability while keeping house bright */}
