@@ -9,7 +9,7 @@ export default function TrustBadgesBar() {
     },
     {
       title: "Dry Verge Certified",
-      subtitle: "Mortar-Free Weather Lock",
+      subtitle: "Mortar-Free Edge Lock",
       icon: "⚙️"
     },
     {
@@ -19,25 +19,25 @@ export default function TrustBadgesBar() {
     },
     {
       title: "Service Financing",
-      subtitle: "Flexible Payment Options",
+      subtitle: "Flexible Payment Plans",
       icon: "💳"
     }
   ];
 
   return (
-    <section className="bg-white py-8 border-b border-slate-200">
+    <section className="bg-white py-6 sm:py-8 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-center text-xs font-bold text-slate-400 uppercase tracking-widest font-heading mb-6">
+        <p className="text-center text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-widest font-heading mb-4 sm:mb-6">
           FEATURED TRUST & GUARANTEES
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 items-center">
           {badges.map((b, idx) => (
-            <div key={idx} className="flex items-center justify-center gap-3 p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-emerald-700/40 transition-colors">
-              <span className="text-2xl">{b.icon}</span>
+            <div key={idx} className="flex items-center justify-start sm:justify-center gap-2.5 sm:gap-3 p-3 sm:p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-emerald-700/40 transition-colors">
+              <span className="text-xl sm:text-2xl shrink-0">{b.icon}</span>
               <div className="text-left">
-                <span className="text-sm font-bold text-slate-900 font-heading block leading-tight">{b.title}</span>
-                <span className="text-[11px] text-slate-500 font-medium block">{b.subtitle}</span>
+                <span className="text-xs sm:text-sm font-bold text-slate-900 font-heading block leading-tight">{b.title}</span>
+                <span className="text-[10px] sm:text-[11px] text-slate-500 font-medium block truncate">{b.subtitle}</span>
               </div>
             </div>
           ))}

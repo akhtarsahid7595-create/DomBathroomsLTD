@@ -7,11 +7,11 @@ export default function Header({ onOpenQuote }) {
   return (
     <header className="sticky top-0 w-full bg-white border-b border-slate-200 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-24">
+        <div className="flex justify-between items-center h-20 sm:h-24">
           
-          {/* Recreated Logo from Flyer */}
-          <a href="#" className="flex items-center group">
-            <EvercrestLogo variant="light" />
+          {/* Logo with compact sizing on small mobile viewports */}
+          <a href="#" className="flex items-center group shrink-0">
+            <EvercrestLogo variant="light" size="small" />
           </a>
 
           {/* Desktop Navigation Links */}
@@ -35,10 +35,10 @@ export default function Header({ onOpenQuote }) {
           </nav>
 
           {/* Action CTAs */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <a
               href="tel:0871234567"
-              className="ic-btn-phone text-xs sm:text-sm py-2.5 px-4 sm:px-5 hidden sm:inline-flex"
+              className="ic-btn-phone text-xs sm:text-sm py-2.5 px-3.5 sm:px-5 hidden sm:inline-flex min-h-[44px] items-center"
             >
               <svg className="w-4 h-4 text-emerald-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h32a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" />
@@ -48,19 +48,19 @@ export default function Header({ onOpenQuote }) {
 
             <button
               onClick={onOpenQuote}
-              className="ic-btn-primary text-xs sm:text-sm py-2.5 px-5 sm:px-6"
+              className="ic-btn-primary text-xs sm:text-sm py-2.5 px-3.5 sm:px-6 hidden xs:inline-flex min-h-[44px] items-center"
             >
-              <span>Get a Free Estimate</span>
+              <span>Get Free Estimate</span>
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </button>
 
-            {/* Mobile Toggle */}
+            {/* Mobile Hamburger Toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-lg bg-slate-100 text-slate-700 hover:text-emerald-800 transition-colors"
-              aria-label="Toggle Menu"
+              className="lg:hidden p-2.5 rounded-xl bg-slate-100 text-slate-800 hover:text-emerald-800 transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center border border-slate-200"
+              aria-label="Toggle Navigation Menu"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {mobileMenuOpen ? (
@@ -75,28 +75,46 @@ export default function Header({ onOpenQuote }) {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Enhanced Mobile Drawer Navigation */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-slate-200 px-6 py-6 space-y-4">
-          <nav className="flex flex-col space-y-3 font-semibold text-slate-700 text-sm">
-            <a href="#services" onClick={() => setMobileMenuOpen(false)} className="py-2 border-b border-slate-100">Services</a>
-            <a href="#areas" onClick={() => setMobileMenuOpen(false)} className="py-2 border-b border-slate-100">Areas We Serve</a>
-            <a href="#about" onClick={() => setMobileMenuOpen(false)} className="py-2 border-b border-slate-100">About</a>
-            <a href="#portfolio" onClick={() => setMobileMenuOpen(false)} className="py-2 border-b border-slate-100">Portfolio</a>
-            <a href="#reviews" onClick={() => setMobileMenuOpen(false)} className="py-2 border-b border-slate-100">Reviews</a>
-            <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="py-2 border-b border-slate-100">Contact</a>
+        <div className="lg:hidden bg-white border-b border-slate-200 px-6 py-6 space-y-4 shadow-2xl">
+          <nav className="flex flex-col space-y-3 font-semibold text-slate-800 text-base">
+            <a href="#services" onClick={() => setMobileMenuOpen(false)} className="py-2.5 border-b border-slate-100 flex items-center justify-between">
+              <span>Services</span>
+              <span className="text-slate-400">→</span>
+            </a>
+            <a href="#areas" onClick={() => setMobileMenuOpen(false)} className="py-2.5 border-b border-slate-100 flex items-center justify-between">
+              <span>Areas We Serve</span>
+              <span className="text-slate-400">→</span>
+            </a>
+            <a href="#about" onClick={() => setMobileMenuOpen(false)} className="py-2.5 border-b border-slate-100 flex items-center justify-between">
+              <span>About Us</span>
+              <span className="text-slate-400">→</span>
+            </a>
+            <a href="#portfolio" onClick={() => setMobileMenuOpen(false)} className="py-2.5 border-b border-slate-100 flex items-center justify-between">
+              <span>Portfolio & Gallery</span>
+              <span className="text-slate-400">→</span>
+            </a>
+            <a href="#reviews" onClick={() => setMobileMenuOpen(false)} className="py-2.5 border-b border-slate-100 flex items-center justify-between">
+              <span>Client Reviews</span>
+              <span className="text-slate-400">→</span>
+            </a>
+            <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="py-2.5 border-b border-slate-100 flex items-center justify-between">
+              <span>Contact Us</span>
+              <span className="text-slate-400">→</span>
+            </a>
           </nav>
           
           <div className="pt-2 flex flex-col gap-3">
-            <a href="tel:0871234567" className="ic-btn-phone w-full text-center text-sm py-3">
-              📞 (087) 123 4567
+            <a href="tel:0871234567" className="ic-btn-phone w-full text-center text-sm py-3.5 font-bold min-h-[48px] flex items-center justify-center">
+              📞 Call Direct: (087) 123 4567
             </a>
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
                 onOpenQuote();
               }}
-              className="ic-btn-primary w-full text-center text-sm py-3"
+              className="ic-btn-primary w-full text-center text-sm py-3.5 font-bold min-h-[48px]"
             >
               Get a Free Estimate →
             </button>

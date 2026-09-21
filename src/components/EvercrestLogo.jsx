@@ -1,16 +1,18 @@
 import React from 'react';
 
-export default function EvercrestLogo({ variant = 'light', className = '' }) {
+export default function EvercrestLogo({ variant = 'light', size = 'normal', className = '' }) {
   const isDark = variant === 'dark';
   const mainTextColor = isDark ? '#FFFFFF' : '#0F172A';
   const rooferColor = isDark ? '#FFFFFF' : '#0F172A';
   const greenColor = '#10B981';
 
+  const isSmall = size === 'small';
+
   return (
-    <div className={`flex items-center gap-3 ${className}`}>
-      {/* Recreated Vector SVG Logo Emblem from Flyer */}
+    <div className={`flex items-center gap-2 sm:gap-3 ${className}`}>
+      {/* Recreated Vector SVG Logo Emblem */}
       <svg 
-        className="w-12 h-12 shrink-0 overflow-visible" 
+        className={`${isSmall ? 'w-8 h-8 sm:w-10 sm:h-10' : 'w-10 h-10 sm:w-12 sm:h-12'} shrink-0 overflow-visible`} 
         viewBox="0 0 200 160" 
         fill="none" 
         xmlns="http://www.w3.org/2000/svg"
@@ -36,16 +38,11 @@ export default function EvercrestLogo({ variant = 'light', className = '' }) {
         <line x1="105" y1="75" x2="125" y2="75" stroke={isDark ? "#0B0F17" : "#FFFFFF"} strokeWidth="2" />
 
         {/* Silhouetted Roofer Working on Left Slope */}
-        {/* Head with hard hat */}
         <circle cx="78" cy="38" r="6" fill={rooferColor} />
         <path d="M72 36C72 33 84 33 84 36Z" fill={greenColor} />
-        {/* Body bending over roof */}
         <path d="M68 55L78 42L90 48L78 62Z" fill={rooferColor} />
-        {/* Arm holding hammer */}
         <path d="M86 46L98 52L94 56" stroke={rooferColor} strokeWidth="3" strokeLinecap="round" />
-        {/* Hammer hitting roof */}
         <rect x="94" y="52" width="6" height="4" fill={greenColor} />
-        {/* Legs kneeling */}
         <path d="M68 55L58 68L70 72" stroke={rooferColor} strokeWidth="4" strokeLinecap="round" />
 
         {/* Ground / Roof Base Line */}
@@ -54,12 +51,12 @@ export default function EvercrestLogo({ variant = 'light', className = '' }) {
 
       {/* Brand Typography */}
       <div className="flex flex-col">
-        <span className="text-2xl font-black tracking-tight uppercase font-heading leading-none" style={{ color: mainTextColor }}>
+        <span className={`${isSmall ? 'text-lg sm:text-xl' : 'text-xl sm:text-2xl'} font-black tracking-tight uppercase font-heading leading-none`} style={{ color: mainTextColor }}>
           EVERCREST
         </span>
-        <div className="flex items-center gap-2 mt-1">
+        <div className="flex items-center gap-1.5 mt-0.5 sm:mt-1">
           <div className="h-[2px] flex-grow bg-emerald-500"></div>
-          <span className="text-xs font-black tracking-widest text-emerald-500 uppercase font-heading">
+          <span className={`${isSmall ? 'text-[9px] sm:text-xs' : 'text-[10px] sm:text-xs'} font-black tracking-widest text-emerald-500 uppercase font-heading`}>
             ROOFING
           </span>
           <div className="h-[2px] flex-grow bg-emerald-500"></div>
