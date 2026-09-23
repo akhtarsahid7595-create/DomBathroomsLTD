@@ -2,11 +2,15 @@ import React, { useState } from 'react';
 import TopBar from './components/TopBar';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import TrustBadgesBar from './components/TrustBadgesBar';
-import WhoWeAre from './components/WhoWeAre';
+import FeaturesBar from './components/FeaturesBar';
 import ServicesSection from './components/ServicesSection';
-import ChatFloatingWidget from './components/ChatFloatingWidget';
+import WhoWeAre from './components/WhoWeAre';
+import GallerySection from './components/GallerySection';
+import AreasWeCover from './components/AreasWeCover';
+import FaqSection from './components/FaqSection';
+import QuoteBanner from './components/QuoteBanner';
 import Footer from './components/Footer';
+import ChatFloatingWidget from './components/ChatFloatingWidget';
 import BookingModal from './components/BookingModal';
 
 export default function App() {
@@ -16,35 +20,47 @@ export default function App() {
   const handleCloseQuote = () => setIsBookingOpen(false);
 
   return (
-    <div className="min-h-screen flex flex-col bg-white font-sans antialiased text-slate-800 selection:bg-emerald-800 selection:text-white overflow-x-hidden">
-      {/* Top Announcement Bar (Licensed, Bonded & Insured) */}
+    <div className="min-h-screen flex flex-col bg-white font-sans antialiased text-[#17201E] selection:bg-[#6FB52C] selection:text-white overflow-x-hidden">
+      {/* 1. Top Bar */}
       <TopBar />
 
-      {/* IrelandContracting White Sticky Navbar with Phone & Free Estimate CTA */}
+      {/* 2. Header / Navbar */}
       <Header onOpenQuote={handleOpenQuote} />
 
-      {/* Main Page Content */}
+      {/* Main Content Sections */}
       <main className="flex-grow">
-        {/* Hero Section matching Image 1 */}
+        {/* 3. Hero Section */}
         <Hero onOpenQuote={handleOpenQuote} />
 
-        {/* Trust & Guarantee Bar matching Image 2 */}
-        <TrustBadgesBar />
+        {/* 4. Features Bar */}
+        <FeaturesBar />
 
-        {/* Centered About Section matching Image 2 */}
+        {/* 5. Services Section */}
+        <ServicesSection onOpenQuote={handleOpenQuote} />
+
+        {/* 6. About Section */}
         <WhoWeAre onOpenQuote={handleOpenQuote} />
 
-        {/* 3-Column Service Card Grid matching Image 3 */}
-        <ServicesSection onOpenQuote={handleOpenQuote} />
+        {/* 7. Our Gallery Section */}
+        <GallerySection onOpenQuote={handleOpenQuote} />
+
+        {/* 8. Areas We Cover Section */}
+        <AreasWeCover />
+
+        {/* 9. FAQ Section */}
+        <FaqSection />
+
+        {/* 10. Free Quote Callout Banner */}
+        <QuoteBanner onOpenQuote={handleOpenQuote} />
       </main>
 
-      {/* Deep Forest Green Footer matching Image 4 */}
-      <Footer onOpenQuote={handleOpenQuote} />
+      {/* 11. Footer */}
+      <Footer />
 
-      {/* Floating "Chat with us" Widget */}
+      {/* Floating Quote Widget */}
       <ChatFloatingWidget onOpenQuote={handleOpenQuote} />
 
-      {/* Estimate Modal */}
+      {/* Free Quote Modal */}
       <BookingModal isOpen={isBookingOpen} onClose={handleCloseQuote} />
     </div>
   );

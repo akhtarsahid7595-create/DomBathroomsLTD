@@ -3,17 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --bg-dark-forest: #0A2916;
-  --bg-forest: #0F381E;
-  --bg-forest-light: #15522B;
-  --accent-green: #16A34A;
+  --g: #6FB52C;
+  --d: #101718;
+  --l: #F5F7F6;
+  --m: #697372;
+  --eyebrow: #9ADA54;
   
-  --text-dark: #0F172A;
-  --text-body: #334155;
-  --text-muted: #64748B;
-  
-  --font-heading: 'Plus Jakarta Sans', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Plus Jakarta Sans', Arial, sans-serif;
+  --font-body: 'Inter', Arial, sans-serif;
 }
 
 @layer base {
@@ -30,7 +27,8 @@
   body {
     font-family: var(--font-body);
     background-color: #FFFFFF;
-    color: var(--text-body);
+    color: #17201E;
+    line-height: 1.55;
     overflow-x: hidden;
   }
   
@@ -40,72 +38,47 @@
   }
 }
 
-/* Header & Card Styles */
-.ic-card {
-  background-color: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: 16px;
-  overflow: hidden;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+/* Eyebrow Tagline */
+.eyebrow-jg {
+  color: var(--eyebrow);
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 1.7px;
+  font-family: var(--font-heading);
 }
 
-.ic-card:hover {
-  border-color: #CBD5E1;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
-  transform: translateY(-4px);
-}
-
-.ic-card-img {
-  width: 100%;
-  aspect-ratio: 16/10;
-  overflow: hidden;
-  background-color: #F1F5F9;
-}
-
-.ic-card-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.ic-card:hover .ic-card-img img {
-  transform: scale(1.04);
-}
-
-/* Button Classes */
-.ic-btn-primary {
-  background-color: #0F381E;
+/* Button Classes matching demo-6.html */
+.btn-jg {
+  background-color: var(--g);
   color: #FFFFFF;
-  font-weight: 700;
+  padding: 12px 22px;
+  border-radius: 5px;
+  font-weight: 800;
   font-family: var(--font-heading);
-  padding: 0.75rem 1.5rem;
-  border-radius: 9999px;
   transition: all 0.2s ease;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  cursor: pointer;
   border: none;
+  cursor: pointer;
   white-space: nowrap;
 }
 
-.ic-btn-primary:hover {
-  background-color: #15522B;
-  box-shadow: 0 10px 20px rgba(15, 56, 30, 0.25);
+.btn-jg:hover {
+  background-color: #5ea323;
+  box-shadow: 0 6px 15px rgba(111, 181, 44, 0.35);
   transform: translateY(-1px);
 }
 
-.ic-btn-phone {
-  background-color: #FFFFFF;
-  color: #0F381E;
-  font-weight: 700;
+.btn-outline-jg {
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  padding: 11px 22px;
+  border-radius: 5px;
+  font-weight: 800;
   font-family: var(--font-heading);
-  padding: 0.75rem 1.25rem;
-  border-radius: 9999px;
-  border: 1.5px solid #0F381E;
   transition: all 0.2s ease;
   display: inline-flex;
   align-items: center;
@@ -115,9 +88,23 @@
   white-space: nowrap;
 }
 
-.ic-btn-phone:hover {
-  background-color: #F8FAFC;
-  border-color: #15522B;
-  color: #15522B;
+.btn-outline-jg:hover {
+  background-color: rgba(255, 255, 255, 0.15);
   transform: translateY(-1px);
+}
+
+/* Card Styles */
+.card-jg {
+  border: 1px solid #E1E7E4;
+  border-radius: 9px;
+  overflow: hidden;
+  background-color: #FFFFFF;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s ease;
+}
+
+.card-jg:hover {
+  border-color: var(--g);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
 }

@@ -1,97 +1,46 @@
 import React from 'react';
-import EvercrestLogo from './EvercrestLogo';
 
-export default function Footer({ onOpenQuote }) {
+export default function Footer() {
   return (
-    <footer className="bg-[#0A2916] text-white py-16 border-t border-emerald-900/60 text-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-[#080D0D] text-[#C8D0CD] py-12 sm:py-16 px-4 sm:px-[6%] border-t border-[#182020] text-sm">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12">
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
-          
-          {/* Brand Info */}
-          <div className="lg:col-span-2 space-y-4">
-            <div className="bg-[#0F381E] p-4 rounded-xl border border-emerald-800/80 inline-block shadow-md">
-              <EvercrestLogo variant="dark" />
-            </div>
-
-            <p className="text-emerald-100/90 text-xs leading-relaxed max-w-sm font-normal">
-              Family-owned exterior contractor serving homes and commercial properties across Ireland since 1998. Fully licensed, bonded, and insured.
-            </p>
-
-            <div className="space-y-2 text-xs text-emerald-200">
-              <p className="flex items-center gap-2">
-                <span>📞</span> <a href="tel:0871234567" className="hover:underline font-bold text-white">(087) 123 4567</a>
-              </p>
-              <p className="flex items-center gap-2">
-                <span>✉️</span> <span>info@evercrestroofing.ie</span>
-              </p>
-              <p className="flex items-center gap-2">
-                <span>📍</span> <span>Serving Homes & Businesses Across Ireland 🇮🇪</span>
-              </p>
-            </div>
+        {/* Brand Column */}
+        <div className="space-y-3">
+          <div className="text-2xl font-black text-white font-heading tracking-tight uppercase">
+            EVERCREST <span className="text-[#6FB52C]">ROOFING</span>
           </div>
-
-          {/* Services Column */}
-          <div className="space-y-3">
-            <h4 className="text-sm font-bold text-white font-heading uppercase tracking-wider">Services</h4>
-            <ul className="space-y-2 text-xs text-emerald-200/90">
-              <li><a href="#services" className="hover:text-white transition-colors">Roofing</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Roof Repair</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Rubber Roofing</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Slate Repair</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Dry Verge Systems</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Gutters</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Soffits & Fascia</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Chimney Repair</a></li>
-            </ul>
-          </div>
-
-          {/* Areas We Serve Column */}
-          <div className="space-y-3">
-            <h4 className="text-sm font-bold text-white font-heading uppercase tracking-wider">Areas We Serve</h4>
-            <ul className="space-y-2 text-xs text-emerald-200/90">
-              <li>County Dublin</li>
-              <li>County Cork</li>
-              <li>County Galway</li>
-              <li>County Kildare</li>
-              <li>County Wicklow</li>
-              <li>County Limerick</li>
-              <li>County Meath</li>
-              <li className="text-emerald-400 font-semibold cursor-pointer" onClick={onOpenQuote}>View all areas →</li>
-            </ul>
-          </div>
-
-          {/* Hours & License */}
-          <div className="space-y-3">
-            <h4 className="text-sm font-bold text-white font-heading uppercase tracking-wider">Hours & Credentials</h4>
-            <div className="text-xs text-emerald-200/90 space-y-1">
-              <p className="font-semibold text-white">Monday – Friday:</p>
-              <p>8:00 AM – 5:00 PM</p>
-              <p className="font-semibold text-white pt-1">Saturday – Sunday:</p>
-              <p>Closed (Emergency Line Active)</p>
-            </div>
-
-            <div className="pt-2 text-xs text-emerald-300 space-y-1">
-              <p>Licensed, Bonded & Insured</p>
-              <p>License IRL #026195</p>
-            </div>
-
-            <div className="pt-2">
-              <span className="inline-flex items-center gap-1.5 text-xs text-amber-400 font-bold">
-                ★ Review us on Google
-              </span>
-            </div>
-          </div>
-
+          <p className="text-xs sm:text-sm text-[#85908D] leading-relaxed">
+            Professional roofing services across Dublin and surrounding counties.
+          </p>
+          <small className="block text-[#85908D] text-xs pt-2">
+            © {new Date().getFullYear()} Evercrest Roofing. All Rights Reserved.
+          </small>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-emerald-900/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-emerald-300">
-          <p>© {new Date().getFullYear()} Evercrest Roofing LLC. All rights reserved.</p>
-          <div className="flex gap-4">
-            <a href="#" className="hover:underline">Privacy Policy</a>
-            <a href="#" className="hover:underline">Terms of Service</a>
-            <a href="#" className="hover:underline">Cookie Settings</a>
+        {/* Quick Links Column */}
+        <div className="space-y-3">
+          <strong className="text-white font-heading font-extrabold text-base block">Quick Links</strong>
+          <div className="space-y-2 text-xs sm:text-sm font-medium">
+            <a href="#about" className="block hover:text-white transition-colors">About Us</a>
+            <a href="#services" className="block hover:text-white transition-colors">Services</a>
+            <a href="#areas" className="block hover:text-white transition-colors">Areas We Cover</a>
+            <a href="#contact" className="block hover:text-white transition-colors">Contact Us</a>
+          </div>
+        </div>
+
+        {/* Contact Info Column */}
+        <div className="space-y-3">
+          <strong className="text-white font-heading font-extrabold text-base block">Contact Info</strong>
+          <div className="space-y-2 text-xs sm:text-sm font-medium">
+            <a href="tel:0852242621" className="block text-[#6FB52C] font-bold text-base hover:underline">
+              085 224 2621
+            </a>
+            <a href="mailto:evercrestroofing@gmail.com" className="block hover:text-white transition-colors">
+              evercrestroofing@gmail.com
+            </a>
+            <span className="block text-[#85908D]">Dublin & Leinster, Ireland</span>
+            <span className="block text-[#9ADA54] font-semibold">24/7 Emergency Service</span>
           </div>
         </div>
 

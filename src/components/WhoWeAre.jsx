@@ -2,32 +2,51 @@ import React from 'react';
 
 export default function WhoWeAre({ onOpenQuote }) {
   return (
-    <section id="about" className="py-12 sm:py-20 bg-white border-b border-slate-200">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 sm:space-y-6">
+    <section id="about" className="py-16 sm:py-20 px-4 sm:px-[6%] bg-[#F5F7F6]">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
         
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-[11px] sm:text-xs font-bold uppercase tracking-wider font-heading">
-          <span>ABOUT EVERCREST CONTRACTING</span>
-        </div>
+        {/* Left Photo Container */}
+        <div 
+          className="h-[300px] sm:h-[390px] rounded-[10px] bg-cover bg-center shadow-md overflow-hidden"
+          style={{ backgroundImage: "url('/images/service_roof_replacement.jpg')" }}
+        />
 
-        <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 font-heading tracking-tight leading-tight">
-          A Full-Service Roofing Company <br />
-          Serving Homes & Businesses Across Ireland
-        </h2>
+        {/* Right Content Column */}
+        <div className="space-y-4">
+          <div className="eyebrow-jg">About Evercrest Roofing</div>
 
-        <p className="text-slate-600 text-sm sm:text-lg leading-relaxed font-normal">
-          Evercrest Contracting is a family-owned roofing company and full-service exterior contractor based in Ireland. 
-          We replace and repair natural Irish slate, clay tiles, and flat rubber roofs, as well as installing dry verge systems, 
-          replacement windows, seamless gutters, soffit and fascia, skylights, and storm lead work.
-        </p>
+          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-black text-[#17201E] font-heading leading-[1.1]">
+            Reliable roofing with a no-nonsense approach.
+          </h2>
 
-        <p className="text-slate-500 text-xs sm:text-sm leading-relaxed">
-          As a certified trade contractor with decades of hands-on local experience, we offer comprehensive manufacturer and workmanship warranties up to 20 years on qualifying systems. Storm damage and leak calls are common in Irish weather, so we respond fast to secure your home.
-        </p>
+          <p className="text-[#697372] text-sm sm:text-base leading-relaxed font-normal">
+            Evercrest Roofing is a reliable, local roofing business serving Dublin and surrounding counties. We understand how important your roof is, so we focus on honest advice, clear pricing, quality materials and a tidy finish.
+          </p>
 
-        <div className="pt-2 sm:pt-4 flex justify-center">
-          <button onClick={onOpenQuote} className="ic-btn-primary text-xs sm:text-sm py-3 px-6 sm:py-3.5 sm:px-8">
-            Get a Free Estimate →
-          </button>
+          {/* 4 Checkmarks 2x2 Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 py-2 font-bold text-sm text-[#17201E] font-heading">
+            <div className="flex items-center gap-2">
+              <span className="text-[#6FB52C] font-extrabold text-base">✓</span> Honest advice
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-[#6FB52C] font-extrabold text-base">✓</span> Transparent pricing
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-[#6FB52C] font-extrabold text-base">✓</span> Quality materials
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-[#6FB52C] font-extrabold text-base">✓</span> Tidy workmanship
+            </div>
+          </div>
+
+          <div className="pt-2">
+            <button
+              onClick={onOpenQuote}
+              className="btn-jg py-3.5 px-6 text-sm font-extrabold"
+            >
+              CONTACT US
+            </button>
+          </div>
         </div>
 
       </div>
