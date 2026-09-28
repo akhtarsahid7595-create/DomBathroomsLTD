@@ -41,15 +41,15 @@ export default function ServicesSection({ onOpenQuote }) {
         {/* Section Header */}
         <div className="text-center max-w-[750px] mx-auto mb-10">
           <div className="eyebrow-jg mb-2">Our Services</div>
-          <h2 className="text-3xl sm:text-4xl font-black text-[#17201E] font-heading leading-tight mb-2">
+          <h2 className="text-3xl sm:text-4xl font-black text-[#0A1E30] font-heading leading-tight mb-2">
             Our Professional Roofing Services
           </h2>
-          <p className="text-[#697372] text-sm sm:text-base font-normal">
+          <p className="text-[#5A6A7A] text-sm sm:text-base font-normal">
             Complete roofing and exterior services, from individual repairs to larger roofing projects.
           </p>
         </div>
 
-        {/* 6 Cards Grid matching demo-6.html */}
+        {/* 6 Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-[1100px] mx-auto">
           {services.map((srv, idx) => (
             <div 
@@ -62,10 +62,10 @@ export default function ServicesSection({ onOpenQuote }) {
                 style={{ backgroundImage: `url('${srv.img}')` }}
               />
               <div className="p-5 space-y-1.5">
-                <h3 className="text-lg font-bold text-[#17201E] font-heading group-hover:text-[#6FB52C] transition-colors">
+                <h3 className="text-lg font-bold text-[#0A1E30] font-heading group-hover:text-[#3B6991] transition-colors">
                   {srv.title}
                 </h3>
-                <p className="text-[#697372] text-sm leading-relaxed font-normal">
+                <p className="text-[#5A6A7A] text-sm leading-relaxed font-normal">
                   {srv.desc}
                 </p>
               </div>

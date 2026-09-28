@@ -27,20 +27,20 @@ export default function FaqSection() {
         {/* Section Header */}
         <div className="text-center max-w-[750px] mx-auto mb-10">
           <div className="eyebrow-jg mb-2">FAQ'S</div>
-          <h2 className="text-3xl sm:text-4xl font-black text-[#17201E] font-heading leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-black text-[#0A1E30] font-heading leading-tight">
             Frequently Asked Questions
           </h2>
         </div>
 
-        {/* Collapsible Details matching demo-6.html */}
-        <div className="divide-y divide-[#DCE2DF] border-t border-b border-[#DCE2DF]">
+        {/* Collapsible Details */}
+        <div className="divide-y divide-[#E1E7ED] border-t border-b border-[#E1E7ED]">
           {faqs.map((faq, idx) => (
             <details key={idx} className="group py-4.5 cursor-pointer">
-              <summary className="font-extrabold text-[#17201E] text-base sm:text-lg font-heading list-none flex justify-between items-center py-2 select-none group-hover:text-[#6FB52C] transition-colors">
+              <summary className="font-extrabold text-[#0A1E30] text-base sm:text-lg font-heading list-none flex justify-between items-center py-2 select-none group-hover:text-[#3B6991] transition-colors">
                 <span>{faq.q}</span>
-                <span className="text-[#6FB52C] font-black text-xl transition-transform group-open:rotate-45">+</span>
+                <span className="text-[#3B6991] font-black text-xl transition-transform group-open:rotate-45">+</span>
               </summary>
-              <p className="text-[#697372] text-sm sm:text-base leading-relaxed pt-2 pb-2 font-normal">
+              <p className="text-[#5A6A7A] text-sm sm:text-base leading-relaxed pt-2 pb-2 font-normal">
                 {faq.a}
               </p>
             </details>

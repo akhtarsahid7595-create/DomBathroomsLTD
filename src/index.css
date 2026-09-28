@@ -3,11 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --g: #6FB52C;
-  --d: #101718;
-  --l: #F5F7F6;
-  --m: #697372;
-  --eyebrow: #9ADA54;
+  --navy-primary: #0F2942;
+  --navy-dark: #0A1E30;
+  --steel-blue: #3B6991;
+  --steel-light: #5A8BAF;
+  
+  --g: #0F2942;
+  --d: #0A1E30;
+  --l: #F5F7FA;
+  --m: #5A6A7A;
+  --eyebrow: #3B6991;
   
   --font-heading: 'Plus Jakarta Sans', Arial, sans-serif;
   --font-body: 'Inter', Arial, sans-serif;
@@ -27,7 +32,7 @@
   body {
     font-family: var(--font-body);
     background-color: #FFFFFF;
-    color: #17201E;
+    color: #0A1E30;
     line-height: 1.55;
     overflow-x: hidden;
   }
@@ -40,7 +45,7 @@
 
 /* Eyebrow Tagline */
 .eyebrow-jg {
-  color: var(--eyebrow);
+  color: var(--steel-blue);
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 900;
@@ -48,9 +53,9 @@
   font-family: var(--font-heading);
 }
 
-/* Button Classes matching demo-6.html */
+/* Button Classes matching Navy Theme */
 .btn-jg {
-  background-color: var(--g);
+  background-color: var(--navy-primary);
   color: #FFFFFF;
   padding: 12px 22px;
   border-radius: 5px;
@@ -67,8 +72,8 @@
 }
 
 .btn-jg:hover {
-  background-color: #5ea323;
-  box-shadow: 0 6px 15px rgba(111, 181, 44, 0.35);
+  background-color: var(--steel-blue);
+  box-shadow: 0 6px 18px rgba(15, 41, 66, 0.35);
   transform: translateY(-1px);
 }
 
@@ -95,7 +100,7 @@
 
 /* Card Styles */
 .card-jg {
-  border: 1px solid #E1E7E4;
+  border: 1px solid #E1E7ED;
   border-radius: 9px;
   overflow: hidden;
   background-color: #FFFFFF;
@@ -104,7 +109,7 @@
 }
 
 .card-jg:hover {
-  border-color: var(--g);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border-color: var(--steel-blue);
+  box-shadow: 0 10px 25px rgba(15, 41, 66, 0.1);
   transform: translateY(-3px);
 }

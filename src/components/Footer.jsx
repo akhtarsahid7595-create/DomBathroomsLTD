@@ -1,19 +1,18 @@
 import React from 'react';
+import EvercrestLogo from './EvercrestLogo';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#080D0D] text-[#C8D0CD] py-12 sm:py-16 px-4 sm:px-[6%] border-t border-[#182020] text-sm">
+    <footer className="bg-[#0A1E30] text-[#B0C4D8] py-12 sm:py-16 px-4 sm:px-[6%] border-t border-[#1E344A] text-sm">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12">
         
         {/* Brand Column */}
         <div className="space-y-3">
-          <div className="text-2xl font-black text-white font-heading tracking-tight uppercase">
-            EVERCREST <span className="text-[#6FB52C]">ROOFING</span>
-          </div>
-          <p className="text-xs sm:text-sm text-[#85908D] leading-relaxed">
+          <EvercrestLogo variant="dark" />
+          <p className="text-xs sm:text-sm text-[#8AA0B8] leading-relaxed pt-1">
             Professional roofing services across Dublin and surrounding counties.
           </p>
-          <small className="block text-[#85908D] text-xs pt-2">
+          <small className="block text-[#8AA0B8] text-xs pt-2">
             © {new Date().getFullYear()} Evercrest Roofing. All Rights Reserved.
           </small>
         </div>
@@ -33,14 +32,14 @@ export default function Footer() {
         <div className="space-y-3">
           <strong className="text-white font-heading font-extrabold text-base block">Contact Info</strong>
           <div className="space-y-2 text-xs sm:text-sm font-medium">
-            <a href="tel:0852242621" className="block text-[#6FB52C] font-bold text-base hover:underline">
+            <a href="tel:0852242621" className="block text-[#5A8BAF] font-bold text-base hover:underline">
               085 224 2621
             </a>
-            <a href="mailto:evercrestroofing@gmail.com" className="block hover:text-white transition-colors">
-              evercrestroofing@gmail.com
+            <a href="mailto:evercrestroofing037@gmail.com" className="block hover:text-white transition-colors font-semibold">
+              evercrestroofing037@gmail.com
             </a>
-            <span className="block text-[#85908D]">Dublin & Leinster, Ireland</span>
-            <span className="block text-[#9ADA54] font-semibold">24/7 Emergency Service</span>
+            <span className="block text-[#8AA0B8]">Dublin & Leinster, Ireland</span>
+            <span className="block text-[#5A8BAF] font-semibold">24/7 Emergency Service</span>
           </div>
         </div>
 
