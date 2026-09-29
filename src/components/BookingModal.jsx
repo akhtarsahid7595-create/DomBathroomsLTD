@@ -80,7 +80,7 @@ export default function BookingModal({ isOpen, onClose }) {
                 <input
                   type="tel"
                   required
-                  placeholder="e.g. 085 224 2621"
+                  placeholder="e.g. 085 231 2579"
                   value={formData.phone}
                   onChange={(e) => setFormData({...formData, phone: e.target.value})}
                   className="w-full px-3.5 py-2.5 rounded-md bg-[#F5F7FA] border border-[#E1E7ED] text-[#0A1E30] text-xs focus:outline-none focus:border-[#0F2942] transition-colors font-medium"

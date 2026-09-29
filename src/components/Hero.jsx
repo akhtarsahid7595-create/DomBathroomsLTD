@@ -41,10 +41,10 @@ export default function Hero({ onOpenQuote }) {
             </button>
 
             <a
-              href="tel:0852242621"
+              href="tel:0852312579"
               className="btn-outline-jg py-3 px-6 text-sm font-bold text-center border-slate-300 hover:border-white"
             >
-              CALL 085 224 2621
+              CALL 085 231 2579
             </a>
           </div>
 

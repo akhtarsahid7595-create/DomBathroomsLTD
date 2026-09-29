@@ -8,8 +8,8 @@ export default function TopBar() {
         <div className="flex items-center gap-2 text-slate-300">
           <b className="text-[#5A8BAF] font-black uppercase tracking-wider">FREE ROOF INSPECTION</b>
           <span>·</span>
-          <a href="tel:0852242621" className="hover:text-[#5A8BAF] transition-colors font-bold">
-            Call 085 224 2621
+          <a href="tel:0852312579" className="hover:text-[#5A8BAF] transition-colors font-bold">
+            Call 085 231 2579
           </a>
         </div>
       </div>

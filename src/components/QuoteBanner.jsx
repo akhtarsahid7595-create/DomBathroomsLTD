@@ -19,10 +19,10 @@ export default function QuoteBanner({ onOpenQuote }) {
 
         <div className="pt-4 flex flex-col sm:flex-row justify-center items-center gap-3">
           <a
-            href="tel:0852242621"
+            href="tel:0852312579"
             className="btn-jg bg-[#0A1E30] text-white hover:bg-[#15324D] py-4 px-8 text-base font-extrabold w-full sm:w-auto"
           >
-            CALL 085 224 2621
+            CALL 085 231 2579
           </a>
           
           <button

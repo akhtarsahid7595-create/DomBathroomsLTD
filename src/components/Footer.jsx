@@ -32,8 +32,8 @@ export default function Footer() {
         <div className="space-y-3">
           <strong className="text-white font-heading font-extrabold text-base block">Contact Info</strong>
           <div className="space-y-2 text-xs sm:text-sm font-medium">
-            <a href="tel:0852242621" className="block text-[#5A8BAF] font-bold text-base hover:underline">
-              085 224 2621
+            <a href="tel:0852312579" className="block text-[#5A8BAF] font-bold text-base hover:underline">
+              085 231 2579
             </a>
             <a href="mailto:evercrestroofing037@gmail.com" className="block hover:text-white transition-colors font-semibold">
               evercrestroofing037@gmail.com

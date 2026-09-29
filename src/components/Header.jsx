@@ -61,8 +61,8 @@ export default function Header({ onOpenQuote }) {
           </nav>
           
           <div className="pt-2 flex flex-col gap-3">
-            <a href="tel:0852242621" className="btn-outline-jg bg-[#0A1E30] text-white w-full text-center text-sm py-3 font-bold">
-              📞 CALL 085 224 2621
+            <a href="tel:0852312579" className="btn-outline-jg bg-[#0A1E30] text-white w-full text-center text-sm py-3 font-bold">
+              📞 CALL 085 231 2579
             </a>
             <button
               onClick={() => {
