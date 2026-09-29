@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const SITE_URL = 'https://evercrest-roofing.com';
+const SITE_URL = 'https://www.evercrest-roofing.com';
 
 export default function SeoHead({ title, description, path = '/', service, business = false }) {
   useEffect(() => {
