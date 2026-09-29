@@ -1,16 +1,15 @@
-# DOM BATHROOMS LTD
+# EVERCREST ROOFING
 
-Official website for **DOM BATHROOMS LTD** - Bathroom Refurbishment & Transformation Specialists in London & Essex.
+Official website for **Evercrest Roofing** - roofing services across Dublin and Leinster.
 
-![DOM BATHROOMS LTD Logo](public/dom_logo.png)
+![Evercrest Roofing Logo](public/favicon.png)
 
 ## Features
-- **UK Trade WordPress Style Layout**: Exact layout inspired by top UK trade websites, featuring trade red accents, Montserrat typography, and circular badge icons.
-- **Official Brand Logo**: Custom high-resolution brand logo integration (`public/dom_logo.png`).
-- **Complete Refurbishment Showcase**: Full bathroom refurbishments, precision tiling, wetroom conversions, and concealed plumbing.
-- **Interactive Before/After Video Showcase**: Step-by-step transformation process demonstration.
-- **Google Reviews & Accreditations**: Verified 5-star Google review integration and supplier badges.
-- **Free Quote Request Modal & Contact Form**: Easy survey booking and direct inquiry form.
+- Crawlable service and area pages with page-specific SEO metadata.
+- Roofing, emergency repair, flat roofing, guttering and chimney service content.
+- Local Dublin area landing pages and XML sitemap.
+- LocalBusiness, RoofingContractor and Service structured data.
+- Free quote request flow and click-to-call contact actions.
 
 ## Tech Stack
 - React 18

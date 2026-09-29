@@ -5,12 +5,12 @@ export default function ServicesSection({ onOpenQuote }) {
     {
       title: "Roof Repairs & Replacement",
       desc: "Durable fixes for leaks, damaged tiles and structural roof problems.",
-      img: "/images/service_roof_replacement.jpg"
+      img: "/images/service_roof_replacement.jpg", href: "/roof-repairs-dublin/"
     },
     {
       title: "Flat Roofing",
       desc: "Professional flat-roof repair and replacement solutions.",
-      img: "/images/service_flat_roof_epdm.jpg"
+      img: "/images/service_flat_roof_epdm.jpg", href: "/flat-roofing-dublin/"
     },
     {
       title: "Dry Verge & Ridge Systems",
@@ -20,7 +20,7 @@ export default function ServicesSection({ onOpenQuote }) {
     {
       title: "Chimney & Valley Repairs",
       desc: "Leadwork, repointing and repairs to vulnerable roof joints.",
-      img: "/images/service_slate_chimney.jpg"
+      img: "/images/service_slate_chimney.jpg", href: "/chimney-repairs-dublin/"
     },
     {
       title: "Roof Cleaning & Treatment",
@@ -30,7 +30,7 @@ export default function ServicesSection({ onOpenQuote }) {
     {
       title: "Fascia, Soffit & Guttering",
       desc: "Rainwater system repairs, cleaning and replacement.",
-      img: "/images/service_guttering.jpg"
+      img: "/images/service_guttering.jpg", href: "/gutter-repairs-dublin/"
     }
   ];
 
@@ -52,10 +52,9 @@ export default function ServicesSection({ onOpenQuote }) {
         {/* 6 Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-[1100px] mx-auto">
           {services.map((srv, idx) => (
-            <div 
+            <a href={srv.href || '#contact'}
               key={idx}
               className="card-jg cursor-pointer group"
-              onClick={onOpenQuote}
             >
               <div 
                 className="h-[155px] bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
@@ -69,7 +68,7 @@ export default function ServicesSection({ onOpenQuote }) {
                   {srv.desc}
                 </p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
