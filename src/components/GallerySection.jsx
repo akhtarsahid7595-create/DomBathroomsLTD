@@ -1,6 +1,20 @@
 import React from 'react';
 
 export default function GallerySection({ onOpenQuote }) {
+  const projectImages = [
+    { src: '/images/client-work-01.png', alt: 'Flat roof installation with rooflights in Dublin' },
+    { src: '/images/client-work-02.png', alt: 'Slate roof and Velux roof window work' },
+    { src: '/images/client-work-03.png', alt: 'Slate roof repair and roof window installation' },
+    { src: '/images/client-work-04.png', alt: 'Roof membrane and batten installation' },
+    { src: '/images/client-work-05.png', alt: 'Completed flat roof with rooflights' },
+    { src: '/images/client-work-06.png', alt: 'Roofline and gable-end roofing work' },
+    { src: '/images/client-work-07.png', alt: 'Flat roof detailing around rooflights' },
+    { src: '/images/client-work-08.png', alt: 'Roof replacement with breathable roofing membrane' },
+    { src: '/images/client-work-09.png', alt: 'Scaffolding and roof repair project' },
+    { src: '/images/client-work-10.png', alt: 'Roof stripped back during replacement work' },
+    { src: '/images/client-work-11.png', alt: 'New roof edge and guttering work' }
+  ];
+
   return (
     <section className="py-16 sm:py-20 px-4 sm:px-[6%] bg-white">
       <div className="max-w-7xl mx-auto">
@@ -12,27 +26,29 @@ export default function GallerySection({ onOpenQuote }) {
             What We've Done
           </h2>
           <p className="text-[#697372] text-sm sm:text-base font-normal">
-            Use this section for real Evercrest before-and-after photos as you build your project portfolio.
+            A selection of real roofing and roof repair projects completed by Evercrest Roofing.
           </p>
         </div>
 
-        {/* Gallery Grid matching demo-6.html */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-[1100px] mx-auto">
-          <div 
-            className="h-[240px] sm:h-[270px] bg-cover bg-center rounded-[9px] shadow-sm hover:opacity-95 transition-opacity cursor-pointer"
-            style={{ backgroundImage: "url('/images/hero_roof_banner.jpg')" }}
-            onClick={onOpenQuote}
-          />
-          <div 
-            className="h-[240px] sm:h-[270px] bg-cover bg-center rounded-[9px] shadow-sm hover:opacity-95 transition-opacity cursor-pointer"
-            style={{ backgroundImage: "url('/images/service_slate_chimney.jpg')" }}
-            onClick={onOpenQuote}
-          />
-          <div 
-            className="h-[240px] sm:h-[270px] bg-cover bg-center rounded-[9px] shadow-sm hover:opacity-95 transition-opacity cursor-pointer"
-            style={{ backgroundImage: "url('/images/service_dry_verge.jpg')" }}
-            onClick={onOpenQuote}
-          />
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 max-w-[1100px] mx-auto">
+          {projectImages.map((image) => (
+            <button
+              type="button"
+              key={image.src}
+              onClick={onOpenQuote}
+              className="group aspect-[4/3] overflow-hidden rounded-[9px] bg-slate-100 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#3B6991]"
+              aria-label={`Request a quote after viewing: ${image.alt}`}
+            >
+              <img
+                src={image.src}
+                alt={image.alt}
+                loading="lazy"
+                decoding="async"
+                sizes="(min-width: 1024px) 33vw, 50vw"
+                className="block h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
+              />
+            </button>
+          ))}
         </div>
 
       </div>
