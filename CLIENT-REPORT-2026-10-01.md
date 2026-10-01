@@ -25,6 +25,7 @@
 - Explained that Google may request additional verification after profile edits.
 - Explained that Google ranking takes time and is not guaranteed immediately.
 - Reviewed the Google Analytics setup and confirmed the measurement ID provided for the website.
+- Added the Google Analytics 4 tag to the website using the provided measurement ID.
 
 ## Pending actions
 
@@ -32,7 +33,7 @@
 - Request indexing for the area pages.
 - Complete Google Business Profile verification if Google still requests it.
 - Confirm the correct service areas and opening hours with the business owner.
-- Confirm that the Google Analytics tag is published on the live website and collecting visits.
+- Confirm that the Google Analytics tag is collecting visits in the live website’s Realtime report after deployment.
 
 ## Summary
 
