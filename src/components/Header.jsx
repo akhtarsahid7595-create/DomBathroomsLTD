@@ -25,12 +25,12 @@ export default function Header({ onOpenQuote }) {
   ];
 
   return (
-    <header className="sticky top-0 w-full bg-white border-b border-[#E1E7ED] z-50 h-[78px] flex items-center shadow-sm">
+    <header className="sticky top-0 w-full bg-white border-b border-[#E1E7ED] z-50 h-[72px] lg:h-[78px] flex items-center shadow-sm">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-[6%] w-full flex justify-between items-center">
         
         {/* Brand Logo matching Navy Blue graphic */}
         <a href={homePrefix || '#home'} className="absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0 flex items-center group shrink-0" aria-label="Evercrest Roofing home">
-          <EvercrestLogo variant="light" size="small" className="scale-[1.06] sm:scale-110 lg:scale-100 origin-center" />
+          <EvercrestLogo variant="light" size="small" className="scale-95 sm:scale-105 lg:scale-100 origin-center" />
         </a>
 
         {/* Desktop Links */}
@@ -78,7 +78,7 @@ export default function Header({ onOpenQuote }) {
         <div className="flex items-center gap-3">
           <button
             onClick={onOpenQuote}
-            className="btn-jg bg-[#0F2942] hover:bg-[#3B6991] text-xs sm:text-sm py-2.5 px-5 shadow-md"
+            className="hidden lg:inline-flex btn-jg bg-[#0F2942] hover:bg-[#3B6991] text-xs sm:text-sm py-2.5 px-5 shadow-md"
           >
             FREE QUOTE
           </button>
