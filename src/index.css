@@ -77,6 +77,13 @@
   transform: translateY(-1px);
 }
 
+/* Keep the mobile header uncluttered: the quote action remains available in the mobile drawer. */
+@media (max-width: 1023px) {
+  .mobile-header-quote {
+    display: none !important;
+  }
+}
+
 .btn-outline-jg {
   border: 1px solid #FFFFFF;
   color: #FFFFFF;

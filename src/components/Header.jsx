@@ -78,7 +78,7 @@ export default function Header({ onOpenQuote }) {
         <div className="flex items-center gap-3">
           <button
             onClick={onOpenQuote}
-            className="hidden lg:inline-flex btn-jg bg-[#0F2942] hover:bg-[#3B6991] text-xs sm:text-sm py-2.5 px-5 shadow-md"
+            className="mobile-header-quote hidden lg:inline-flex btn-jg bg-[#0F2942] hover:bg-[#3B6991] text-xs sm:text-sm py-2.5 px-5 shadow-md"
           >
             FREE QUOTE
           </button>
